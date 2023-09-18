@@ -1,0 +1,14 @@
+D:\HK5\Big_C\Big_C\bin\Debug\Big_C.exe.config
+D:\HK5\Big_C\Big_C\bin\Debug\Big_C.exe
+D:\HK5\Big_C\Big_C\bin\Debug\Big_C.pdb
+D:\HK5\Big_C\Big_C\obj\Debug\Big_C.csproj.AssemblyReference.cache
+D:\HK5\Big_C\Big_C\obj\Debug\Big_C.ChamLuong.resources
+D:\HK5\Big_C\Big_C\obj\Debug\Big_C.Login.resources
+D:\HK5\Big_C\Big_C\obj\Debug\Big_C.Properties.Resources.resources
+D:\HK5\Big_C\Big_C\obj\Debug\Big_C.Register.resources
+D:\HK5\Big_C\Big_C\obj\Debug\Big_C.TrangChu.resources
+D:\HK5\Big_C\Big_C\obj\Debug\Big_C.csproj.GenerateResource.cache
+D:\HK5\Big_C\Big_C\obj\Debug\Big_C.csproj.CoreCompileInputs.cache
+D:\HK5\Big_C\Big_C\obj\Debug\Big_C.exe
+D:\HK5\Big_C\Big_C\obj\Debug\Big_C.pdb
+D:\HK5\Big_C\Big_C\obj\Debug\Big_C.ChiTietNhanVien.resources
