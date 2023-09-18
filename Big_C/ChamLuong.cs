@@ -62,6 +62,13 @@ namespace Big_C
             else
             {
                 MessageBox.Show("Bạn đã thanh toán lương!");
+                txtMa.Text = "";
+                txtMa.Focus();
+                txtCCCD.Text = "";
+                txtName.Text = "";
+                txtSoGioLam.Text = "";
+                txtPhone.Text = "";
+                txtTongLuong.Text = "";
             }
             
         }
@@ -107,6 +114,11 @@ namespace Big_C
                 MessageBox.Show("Không có nhân viên này , vào xem tất cả nhân viên đê!");
                 txtMa.Text = "";
                 txtMa.Focus();
+                txtCCCD.Text = "";
+                txtName.Text = "";
+                txtSoGioLam.Text = "";
+                txtPhone.Text = "";
+                txtTongLuong.Text = "";
             }
             reader.Close();
              
