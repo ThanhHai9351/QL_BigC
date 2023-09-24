@@ -224,7 +224,7 @@ namespace Big_C
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(817, 580);
+            this.ClientSize = new System.Drawing.Size(767, 580);
             this.Controls.Add(this.ViewAll);
             this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.btnThanhToan);

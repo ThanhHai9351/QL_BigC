@@ -18,6 +18,7 @@ namespace Big_C
         {
             InitializeComponent();
         }
+
         List<NhanVien> lnv = new List<NhanVien>();
         string strcon = "SERVER = THANHHAI; DATABASE = QL_BigC; Integrated Security = TRUE";
         SqlConnection connection = null;

@@ -16,7 +16,7 @@ namespace Big_C
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ChamLuong());
+            Application.Run(new Login());
         }
     }
 }

@@ -46,46 +46,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ChamLuong.cs">
+    <Compile Include="Form\ChamLuong.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChamLuong.Designer.cs">
+    <Compile Include="Form\ChamLuong.Designer.cs">
       <DependentUpon>ChamLuong.cs</DependentUpon>
     </Compile>
-    <Compile Include="ChiTietNhanVien.cs">
+    <Compile Include="Form\ChiTietNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChiTietNhanVien.Designer.cs">
+    <Compile Include="Form\ChiTietNhanVien.Designer.cs">
       <DependentUpon>ChiTietNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
+    <Compile Include="Form\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
+    <Compile Include="Form\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\NhanVien.cs" />
-    <Compile Include="Register.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Register.Designer.cs">
-      <DependentUpon>Register.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TrangChu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TrangChu.Designer.cs">
-      <DependentUpon>TrangChu.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="ChamLuong.resx">
+    <Compile Include="Form\TrangChu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\TrangChu.Designer.cs">
+      <DependentUpon>TrangChu.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form\ChamLuong.resx">
       <DependentUpon>ChamLuong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChiTietNhanVien.resx">
+    <EmbeddedResource Include="Form\ChiTietNhanVien.resx">
       <DependentUpon>ChiTietNhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
+    <EmbeddedResource Include="Form\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -96,13 +90,8 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Register.resx">
-      <DependentUpon>Register.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TrangChu.resx">
-      <DependentUpon>TrangChu.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -115,6 +104,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Image\Usericon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
