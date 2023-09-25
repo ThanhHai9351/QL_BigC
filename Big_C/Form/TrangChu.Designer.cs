@@ -38,10 +38,11 @@ namespace Big_C
             this.btnChamCong = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.panelContainer = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelMenu.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -55,8 +56,9 @@ namespace Big_C
             this.panelMenu.Controls.Add(this.btnChamCong);
             this.panelMenu.Controls.Add(this.btnHome);
             this.panelMenu.Location = new System.Drawing.Point(1, 1);
+            this.panelMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(159, 399);
+            this.panelMenu.Size = new System.Drawing.Size(212, 491);
             this.panelMenu.TabIndex = 0;
             this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenu_Paint);
             // 
@@ -65,9 +67,10 @@ namespace Big_C
             this.btnExit.BackColor = System.Drawing.Color.Tan;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.Black;
-            this.btnExit.Location = new System.Drawing.Point(0, 355);
+            this.btnExit.Location = new System.Drawing.Point(0, 437);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(159, 44);
+            this.btnExit.Size = new System.Drawing.Size(212, 54);
             this.btnExit.TabIndex = 6;
             this.btnExit.Text = "Thoát";
             this.btnExit.UseVisualStyleBackColor = false;
@@ -78,9 +81,10 @@ namespace Big_C
             this.btnSupport.BackColor = System.Drawing.Color.Tan;
             this.btnSupport.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSupport.ForeColor = System.Drawing.Color.Black;
-            this.btnSupport.Location = new System.Drawing.Point(0, 275);
+            this.btnSupport.Location = new System.Drawing.Point(0, 338);
+            this.btnSupport.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSupport.Name = "btnSupport";
-            this.btnSupport.Size = new System.Drawing.Size(159, 44);
+            this.btnSupport.Size = new System.Drawing.Size(212, 54);
             this.btnSupport.TabIndex = 5;
             this.btnSupport.Text = "Hỗ Trợ";
             this.btnSupport.UseVisualStyleBackColor = false;
@@ -91,9 +95,10 @@ namespace Big_C
             this.btnQLNhanSu.BackColor = System.Drawing.Color.Tan;
             this.btnQLNhanSu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLNhanSu.ForeColor = System.Drawing.Color.Black;
-            this.btnQLNhanSu.Location = new System.Drawing.Point(0, 235);
+            this.btnQLNhanSu.Location = new System.Drawing.Point(0, 289);
+            this.btnQLNhanSu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnQLNhanSu.Name = "btnQLNhanSu";
-            this.btnQLNhanSu.Size = new System.Drawing.Size(159, 44);
+            this.btnQLNhanSu.Size = new System.Drawing.Size(212, 54);
             this.btnQLNhanSu.TabIndex = 4;
             this.btnQLNhanSu.Text = "Quản Lý Nhân Sự";
             this.btnQLNhanSu.UseVisualStyleBackColor = false;
@@ -104,9 +109,10 @@ namespace Big_C
             this.btnQuanLyLichLam.BackColor = System.Drawing.Color.Tan;
             this.btnQuanLyLichLam.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuanLyLichLam.ForeColor = System.Drawing.Color.Black;
-            this.btnQuanLyLichLam.Location = new System.Drawing.Point(0, 195);
+            this.btnQuanLyLichLam.Location = new System.Drawing.Point(0, 240);
+            this.btnQuanLyLichLam.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnQuanLyLichLam.Name = "btnQuanLyLichLam";
-            this.btnQuanLyLichLam.Size = new System.Drawing.Size(159, 44);
+            this.btnQuanLyLichLam.Size = new System.Drawing.Size(212, 54);
             this.btnQuanLyLichLam.TabIndex = 3;
             this.btnQuanLyLichLam.Text = "Quản Lý Lịch Làm";
             this.btnQuanLyLichLam.UseVisualStyleBackColor = false;
@@ -117,9 +123,10 @@ namespace Big_C
             this.btnQLHangKho.BackColor = System.Drawing.Color.Tan;
             this.btnQLHangKho.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLHangKho.ForeColor = System.Drawing.Color.Black;
-            this.btnQLHangKho.Location = new System.Drawing.Point(0, 155);
+            this.btnQLHangKho.Location = new System.Drawing.Point(0, 191);
+            this.btnQLHangKho.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnQLHangKho.Name = "btnQLHangKho";
-            this.btnQLHangKho.Size = new System.Drawing.Size(159, 44);
+            this.btnQLHangKho.Size = new System.Drawing.Size(212, 54);
             this.btnQLHangKho.TabIndex = 2;
             this.btnQLHangKho.Text = "Quản Lý Hàng Kho";
             this.btnQLHangKho.UseVisualStyleBackColor = false;
@@ -130,9 +137,10 @@ namespace Big_C
             this.btnChamCong.BackColor = System.Drawing.Color.Tan;
             this.btnChamCong.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChamCong.ForeColor = System.Drawing.Color.Black;
-            this.btnChamCong.Location = new System.Drawing.Point(0, 117);
+            this.btnChamCong.Location = new System.Drawing.Point(0, 144);
+            this.btnChamCong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnChamCong.Name = "btnChamCong";
-            this.btnChamCong.Size = new System.Drawing.Size(159, 44);
+            this.btnChamCong.Size = new System.Drawing.Size(212, 54);
             this.btnChamCong.TabIndex = 1;
             this.btnChamCong.Text = "Chấm Công";
             this.btnChamCong.UseVisualStyleBackColor = false;
@@ -143,9 +151,10 @@ namespace Big_C
             this.btnHome.BackColor = System.Drawing.Color.PaleTurquoise;
             this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.ForeColor = System.Drawing.Color.Black;
-            this.btnHome.Location = new System.Drawing.Point(0, 76);
+            this.btnHome.Location = new System.Drawing.Point(0, 94);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(159, 48);
+            this.btnHome.Size = new System.Drawing.Size(212, 59);
             this.btnHome.TabIndex = 0;
             this.btnHome.Text = "Home";
             this.btnHome.UseVisualStyleBackColor = false;
@@ -154,47 +163,50 @@ namespace Big_C
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkOrange;
-            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Location = new System.Drawing.Point(1, 1);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(159, 82);
+            this.panel2.Size = new System.Drawing.Size(212, 101);
             this.panel2.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Millimeter, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(11, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 44);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "BIG C";
             // 
             // panelContainer
             // 
             this.panelContainer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panelContainer.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelContainer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelContainer.Location = new System.Drawing.Point(159, 0);
+            this.panelContainer.Location = new System.Drawing.Point(212, 0);
+            this.panelContainer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(546, 399);
+            this.panelContainer.Size = new System.Drawing.Size(728, 491);
             this.panelContainer.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Big_C.Properties.Resources.BigC;
+            this.pictureBox1.InitialImage = global::Big_C.Properties.Resources.BigC;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(212, 101);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // TrangChu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(705, 399);
+            this.ClientSize = new System.Drawing.Size(940, 491);
             this.Controls.Add(this.panelContainer);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panelMenu);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "TrangChu";
             this.Text = "TrangChu";
             this.Load += new System.EventHandler(this.TrangChu_Load);
             this.panelMenu.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -203,7 +215,6 @@ namespace Big_C
 
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnSupport;
@@ -212,5 +223,6 @@ namespace Big_C
         private System.Windows.Forms.Button btnQLHangKho;
         private System.Windows.Forms.Button btnChamCong;
         private System.Windows.Forms.Panel panelContainer;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

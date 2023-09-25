@@ -28,31 +28,49 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.dtGrView_NhanVien = new System.Windows.Forms.DataGridView();
+            this.btnLoad = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dtGrView_NhanVien)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // dtGrView_NhanVien
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(37, 60);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Quản lý nhân sự";
+            this.dtGrView_NhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtGrView_NhanVien.Location = new System.Drawing.Point(0, 131);
+            this.dtGrView_NhanVien.Name = "dtGrView_NhanVien";
+            this.dtGrView_NhanVien.RowHeadersWidth = 51;
+            this.dtGrView_NhanVien.RowTemplate.Height = 24;
+            this.dtGrView_NhanVien.Size = new System.Drawing.Size(790, 314);
+            this.dtGrView_NhanVien.TabIndex = 0;
+            this.dtGrView_NhanVien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGrView_NhanVien_CellContentClick);
+            // 
+            // btnLoad
+            // 
+            this.btnLoad.Location = new System.Drawing.Point(66, 28);
+            this.btnLoad.Name = "btnLoad";
+            this.btnLoad.Size = new System.Drawing.Size(169, 50);
+            this.btnLoad.TabIndex = 1;
+            this.btnLoad.Text = "Load danh sách nhân viên";
+            this.btnLoad.UseVisualStyleBackColor = true;
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
             // QLNhanSu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnLoad);
+            this.Controls.Add(this.dtGrView_NhanVien);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "QLNhanSu";
+            this.Size = new System.Drawing.Size(790, 445);
+            ((System.ComponentModel.ISupportInitialize)(this.dtGrView_NhanVien)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dtGrView_NhanVien;
+        private System.Windows.Forms.Button btnLoad;
     }
 }
