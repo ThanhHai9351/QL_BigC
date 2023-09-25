@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using Big_C.Model;
+using Big_C.Forms;
 
 namespace Big_C.UserControls
 {
@@ -64,6 +65,12 @@ namespace Big_C.UserControls
             reader.Close();
 
             dtGrView_NhanVien.DataSource = lnv;
+        }
+
+        private void btnCreateNV_Click(object sender, EventArgs e)
+        {
+            CreateNV cr = new CreateNV();
+            cr.Show();
         }
     }
 
