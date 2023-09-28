@@ -31,6 +31,7 @@
             this.dtGrView_NhanVien = new System.Windows.Forms.DataGridView();
             this.btnLoad = new System.Windows.Forms.Button();
             this.btnCreateNV = new System.Windows.Forms.Button();
+            this.btnEditDeleteNV = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtGrView_NhanVien)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,7 +62,7 @@
             // 
             this.btnCreateNV.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnCreateNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreateNV.Location = new System.Drawing.Point(329, 28);
+            this.btnCreateNV.Location = new System.Drawing.Point(552, 28);
             this.btnCreateNV.Name = "btnCreateNV";
             this.btnCreateNV.Size = new System.Drawing.Size(169, 50);
             this.btnCreateNV.TabIndex = 2;
@@ -69,10 +70,23 @@
             this.btnCreateNV.UseVisualStyleBackColor = false;
             this.btnCreateNV.Click += new System.EventHandler(this.btnCreateNV_Click);
             // 
+            // btnEditDeleteNV
+            // 
+            this.btnEditDeleteNV.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnEditDeleteNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditDeleteNV.Location = new System.Drawing.Point(311, 28);
+            this.btnEditDeleteNV.Name = "btnEditDeleteNV";
+            this.btnEditDeleteNV.Size = new System.Drawing.Size(169, 50);
+            this.btnEditDeleteNV.TabIndex = 3;
+            this.btnEditDeleteNV.Text = "Sửa, xóa nhân viên";
+            this.btnEditDeleteNV.UseVisualStyleBackColor = false;
+            this.btnEditDeleteNV.Click += new System.EventHandler(this.btnEditDeleteNV_Click);
+            // 
             // QLNhanSu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnEditDeleteNV);
             this.Controls.Add(this.btnCreateNV);
             this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.dtGrView_NhanVien);
@@ -89,5 +103,6 @@
         private System.Windows.Forms.DataGridView dtGrView_NhanVien;
         private System.Windows.Forms.Button btnLoad;
         private System.Windows.Forms.Button btnCreateNV;
+        private System.Windows.Forms.Button btnEditDeleteNV;
     }
 }

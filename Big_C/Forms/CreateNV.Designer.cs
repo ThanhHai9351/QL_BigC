@@ -48,8 +48,22 @@ namespace Big_C.Forms
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.dt_NgaySinh = new System.Windows.Forms.DateTimePicker();
             this.dt_NgayVaoLam = new System.Windows.Forms.DateTimePicker();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAddNV = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.manv = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tennv = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ngaysinh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.diachi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.sdt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.cccd = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ngayvaolam = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.songaylam = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.maquanly = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -66,7 +80,7 @@ namespace Big_C.Forms
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(26, 161);
+            this.label2.Location = new System.Drawing.Point(26, 129);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(112, 18);
             this.label2.TabIndex = 1;
@@ -76,7 +90,7 @@ namespace Big_C.Forms
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(26, 219);
+            this.label3.Location = new System.Drawing.Point(33, 167);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 18);
             this.label3.TabIndex = 2;
@@ -86,7 +100,7 @@ namespace Big_C.Forms
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(26, 281);
+            this.label4.Location = new System.Drawing.Point(26, 203);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 18);
             this.label4.TabIndex = 3;
@@ -96,7 +110,7 @@ namespace Big_C.Forms
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(389, 353);
+            this.label5.Location = new System.Drawing.Point(389, 242);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(46, 18);
             this.label5.TabIndex = 4;
@@ -106,7 +120,7 @@ namespace Big_C.Forms
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(389, 161);
+            this.label6.Location = new System.Drawing.Point(389, 129);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(61, 18);
             this.label6.TabIndex = 5;
@@ -116,7 +130,7 @@ namespace Big_C.Forms
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(389, 219);
+            this.label7.Location = new System.Drawing.Point(386, 163);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(115, 18);
             this.label7.TabIndex = 6;
@@ -126,7 +140,7 @@ namespace Big_C.Forms
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(389, 281);
+            this.label8.Location = new System.Drawing.Point(389, 203);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(94, 18);
             this.label8.TabIndex = 7;
@@ -147,7 +161,7 @@ namespace Big_C.Forms
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(26, 353);
+            this.label9.Location = new System.Drawing.Point(26, 238);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(94, 18);
             this.label9.TabIndex = 9;
@@ -155,84 +169,170 @@ namespace Big_C.Forms
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(144, 157);
+            this.txtName.Location = new System.Drawing.Point(155, 125);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(215, 22);
             this.txtName.TabIndex = 10;
             // 
             // txtDiaChi
             // 
-            this.txtDiaChi.Location = new System.Drawing.Point(144, 277);
+            this.txtDiaChi.Location = new System.Drawing.Point(155, 199);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(215, 22);
             this.txtDiaChi.TabIndex = 11;
             // 
             // txtSoGioLam
             // 
-            this.txtSoGioLam.Location = new System.Drawing.Point(144, 353);
+            this.txtSoGioLam.Location = new System.Drawing.Point(155, 238);
             this.txtSoGioLam.Name = "txtSoGioLam";
             this.txtSoGioLam.Size = new System.Drawing.Size(215, 22);
             this.txtSoGioLam.TabIndex = 12;
             // 
             // txtMa
             // 
-            this.txtMa.Location = new System.Drawing.Point(507, 88);
+            this.txtMa.Location = new System.Drawing.Point(526, 89);
             this.txtMa.Name = "txtMa";
             this.txtMa.Size = new System.Drawing.Size(236, 22);
             this.txtMa.TabIndex = 13;
             // 
             // txtCCCD
             // 
-            this.txtCCCD.Location = new System.Drawing.Point(507, 157);
+            this.txtCCCD.Location = new System.Drawing.Point(526, 126);
             this.txtCCCD.Name = "txtCCCD";
             this.txtCCCD.Size = new System.Drawing.Size(236, 22);
             this.txtCCCD.TabIndex = 14;
             // 
             // txtMaQuanLy
             // 
-            this.txtMaQuanLy.Location = new System.Drawing.Point(507, 280);
+            this.txtMaQuanLy.Location = new System.Drawing.Point(526, 203);
             this.txtMaQuanLy.Name = "txtMaQuanLy";
             this.txtMaQuanLy.Size = new System.Drawing.Size(236, 22);
             this.txtMaQuanLy.TabIndex = 15;
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(507, 349);
+            this.txtPhone.Location = new System.Drawing.Point(526, 239);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(236, 22);
             this.txtPhone.TabIndex = 16;
             // 
             // dt_NgaySinh
             // 
-            this.dt_NgaySinh.Location = new System.Drawing.Point(133, 219);
+            this.dt_NgaySinh.Location = new System.Drawing.Point(155, 163);
             this.dt_NgaySinh.Name = "dt_NgaySinh";
-            this.dt_NgaySinh.Size = new System.Drawing.Size(226, 22);
+            this.dt_NgaySinh.Size = new System.Drawing.Size(212, 22);
             this.dt_NgaySinh.TabIndex = 17;
             // 
             // dt_NgayVaoLam
             // 
-            this.dt_NgayVaoLam.Location = new System.Drawing.Point(507, 215);
+            this.dt_NgayVaoLam.Location = new System.Drawing.Point(526, 160);
             this.dt_NgayVaoLam.Name = "dt_NgayVaoLam";
-            this.dt_NgayVaoLam.Size = new System.Drawing.Size(247, 22);
+            this.dt_NgayVaoLam.Size = new System.Drawing.Size(236, 22);
             this.dt_NgayVaoLam.TabIndex = 18;
             // 
-            // button1
+            // btnAddNV
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(320, 385);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(163, 61);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Thêm nhân viên mới";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnAddNV.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnAddNV.ForeColor = System.Drawing.Color.White;
+            this.btnAddNV.Location = new System.Drawing.Point(320, 280);
+            this.btnAddNV.Name = "btnAddNV";
+            this.btnAddNV.Size = new System.Drawing.Size(163, 61);
+            this.btnAddNV.TabIndex = 19;
+            this.btnAddNV.Text = "Thêm nhân viên mới";
+            this.btnAddNV.UseVisualStyleBackColor = false;
+            this.btnAddNV.Click += new System.EventHandler(this.btnAddNV_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Big_C.Properties.Resources.Usericon;
+            this.pictureBox2.Location = new System.Drawing.Point(768, 11);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 99);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 20;
+            this.pictureBox2.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.listView1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 374);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(880, 393);
+            this.panel1.TabIndex = 21;
+            // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.manv,
+            this.tennv,
+            this.ngaysinh,
+            this.diachi,
+            this.sdt,
+            this.cccd,
+            this.ngayvaolam,
+            this.songaylam,
+            this.maquanly});
+            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listView1.FullRowSelect = true;
+            this.listView1.GridLines = true;
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(0, 0);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(880, 393);
+            this.listView1.TabIndex = 0;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // manv
+            // 
+            this.manv.Text = "Mã Nhân Viên";
+            this.manv.Width = 100;
+            // 
+            // tennv
+            // 
+            this.tennv.Text = "Tên Nhân Viên";
+            this.tennv.Width = 117;
+            // 
+            // ngaysinh
+            // 
+            this.ngaysinh.Text = "Ngày Sinh";
+            this.ngaysinh.Width = 98;
+            // 
+            // diachi
+            // 
+            this.diachi.Text = "Địa Chỉ";
+            this.diachi.Width = 106;
+            // 
+            // sdt
+            // 
+            this.sdt.Text = "SDT";
+            this.sdt.Width = 90;
+            // 
+            // cccd
+            // 
+            this.cccd.Text = "CCCD";
+            // 
+            // ngayvaolam
+            // 
+            this.ngayvaolam.Text = "Ngày Vào Làm";
+            // 
+            // songaylam
+            // 
+            this.songaylam.Text = "Số Ngày Làm";
+            // 
+            // maquanly
+            // 
+            this.maquanly.Text = "Mã Quản Lý";
             // 
             // CreateNV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(849, 458);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(880, 767);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.btnAddNV);
             this.Controls.Add(this.dt_NgayVaoLam);
             this.Controls.Add(this.dt_NgaySinh);
             this.Controls.Add(this.txtPhone);
@@ -254,7 +354,10 @@ namespace Big_C.Forms
             this.Controls.Add(this.label1);
             this.Name = "CreateNV";
             this.Text = "CreateNV";
+            this.Load += new System.EventHandler(this.CreateNV_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -281,6 +384,18 @@ namespace Big_C.Forms
         private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.DateTimePicker dt_NgaySinh;
         private System.Windows.Forms.DateTimePicker dt_NgayVaoLam;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAddNV;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader manv;
+        private System.Windows.Forms.ColumnHeader tennv;
+        private System.Windows.Forms.ColumnHeader ngaysinh;
+        private System.Windows.Forms.ColumnHeader diachi;
+        private System.Windows.Forms.ColumnHeader sdt;
+        private System.Windows.Forms.ColumnHeader cccd;
+        private System.Windows.Forms.ColumnHeader ngayvaolam;
+        private System.Windows.Forms.ColumnHeader songaylam;
+        private System.Windows.Forms.ColumnHeader maquanly;
     }
 }

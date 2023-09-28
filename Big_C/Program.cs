@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Big_C.Forms;
 
 namespace Big_C
 {
@@ -16,7 +17,7 @@ namespace Big_C
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            Application.Run(new CreateNV());
         }
     }
 }

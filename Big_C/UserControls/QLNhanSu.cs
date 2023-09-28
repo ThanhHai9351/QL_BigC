@@ -72,6 +72,12 @@ namespace Big_C.UserControls
             CreateNV cr = new CreateNV();
             cr.Show();
         }
+
+        private void btnEditDeleteNV_Click(object sender, EventArgs e)
+        {
+            EditRemoveNhanVien form = new EditRemoveNhanVien();
+            form.Show();
+        }
     }
 
 }
