@@ -78,6 +78,11 @@ namespace Big_C.UserControls
             EditRemoveNhanVien form = new EditRemoveNhanVien();
             form.Show();
         }
+
+        private void QLNhanSu_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

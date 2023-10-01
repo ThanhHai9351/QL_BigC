@@ -17,7 +17,7 @@ namespace Big_C
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CreateNV());
+            Application.Run(new TrangChu());
         }
     }
 }

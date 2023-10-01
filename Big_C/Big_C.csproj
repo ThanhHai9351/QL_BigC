@@ -71,6 +71,8 @@
     <Compile Include="Forms\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\HangHoa.cs" />
+    <Compile Include="Model\NhaCungCap.cs" />
     <Compile Include="Model\NhanVien.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -85,6 +87,12 @@
     </Compile>
     <Compile Include="UserControls\ChamCong.Designer.cs">
       <DependentUpon>ChamCong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\EnterOrder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\EnterOrder.Designer.cs">
+      <DependentUpon>EnterOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\Home.cs">
       <SubType>UserControl</SubType>
@@ -116,6 +124,18 @@
     <Compile Include="UserControls\Suppport.Designer.cs">
       <DependentUpon>Suppport.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\TonKho.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\TonKho.Designer.cs">
+      <DependentUpon>TonKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ViewOrder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ViewOrder.Designer.cs">
+      <DependentUpon>ViewOrder.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\ChiTietNhanVien.resx">
       <DependentUpon>ChiTietNhanVien.cs</DependentUpon>
     </EmbeddedResource>
@@ -144,6 +164,9 @@
     <EmbeddedResource Include="UserControls\ChamCong.resx">
       <DependentUpon>ChamCong.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\EnterOrder.resx">
+      <DependentUpon>EnterOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
@@ -158,6 +181,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Suppport.resx">
       <DependentUpon>Suppport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\TonKho.resx">
+      <DependentUpon>TonKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ViewOrder.resx">
+      <DependentUpon>ViewOrder.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

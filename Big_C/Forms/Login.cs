@@ -52,6 +52,7 @@ namespace Big_C
                 TrangChu frm = new TrangChu();
                 frm.Show();
             }
+
         }
 
         private void txtUser_Leave(object sender, EventArgs e)

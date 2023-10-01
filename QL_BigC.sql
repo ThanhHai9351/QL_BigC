@@ -67,11 +67,35 @@ create table Luong
 	constraint FK_Luong2 foreign key (MaChiNhanh) references ChiNhanh(MaChiNhanh)
 )
 
-Create table UserLogin
-(
-	UserName char(50) primary key,
-	Pass char(50)
+create table NhaCungCap(
+	MaNhaCungCap char(10) primary key,
+	TenNhaCungCap nvarchar(100),
+	DiaChi nvarchar(100)
 )
+
+create table HangHoa
+(
+	MaHangHoa char(10) primary key,
+	TenHangHoa nvarchar(100),
+	DonGia int,
+	MaNhaCungCap char(10),
+	constraint PK_HangHoa foreign key(MaNhaCungCap) references NhaCungCap(MaNhaCungCap)
+)
+
+create table PhieuMuaHang
+(
+	MaPhieu char(10) primary key,
+	MaHangHoa char(10),
+	MaNhaCungCap char(10),
+	NgayDat DateTime,
+	NgayGiao DateTime,
+	SoLuong int,
+	TongTien int,
+	constraint FK_PhieuMuaHang_HangHoa foreign key (MaHangHoa) references HangHoa(MaHangHoa),
+	constraint FK_PhieuMuaHang_NhaCungCap foreign key (MaNhaCungCap) references NhaCungCap(MaNhaCungCap)
+
+)
+
 
 
 insert into ChiNhanh values 
@@ -87,4 +111,21 @@ insert into NhanVien values
 ('NV04',N'Nguyễn Ngọc Hải3','2003-01-27',N'77 Lê Trọng Tấn','0366985485','053365448485','2022-03-02',19,'QL01'),
 ('NV05',N'Nguyễn Ngọc Hải4','2003-01-27',N'77 Lê Trọng Tấn','0366985486','053365448489','2022-03-02',16,'QL01'),
 ('NV06',N'Nguyễn Ngọc Hải5','2003-01-27',N'77 Lê Trọng Tấn','0366985487','053365448486','2022-03-02',18,'QL01')
+
+insert into NhaCungCap values
+('NC01',N'RichsHai',N'98 Phạm Văn Đồng'),
+('NC02',N'NhatNhatThanh',N'66 Nguyễn Kiệm'),
+('NC03',N'TripleLike',N'56e Ung Văn Khiêm'),
+('NC04',N'TanKhaiHa',N'88 Nguyễn Văn Trỗi'),
+('NC05',N'Mega',N'66a Tân Thế Giới')
+
+insert into HangHoa values
+('HH01',N'Richs',28000,'NC01'),
+('HH02',N'Sua Dac',20000,'NC02'),
+('HH03',N'Khan Giay',15000,'NC03'),
+('HH04',N'Sua Tuoi',23000,'NC04'),
+('HH05',N'Sa Cay',8000,'NC05'),
+('HH06',N'Chanh Giay',23000,'NC05'),
+('HH07',N'Muoi',23000,'NC05'),
+('HH08',N'Oreo Cay',23000,'NC05')
 

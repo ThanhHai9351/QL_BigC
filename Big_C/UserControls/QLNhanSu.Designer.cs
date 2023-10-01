@@ -38,11 +38,12 @@
             // dtGrView_NhanVien
             // 
             this.dtGrView_NhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtGrView_NhanVien.Location = new System.Drawing.Point(0, 114);
+            this.dtGrView_NhanVien.Location = new System.Drawing.Point(0, 47);
+            this.dtGrView_NhanVien.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtGrView_NhanVien.Name = "dtGrView_NhanVien";
             this.dtGrView_NhanVien.RowHeadersWidth = 51;
             this.dtGrView_NhanVien.RowTemplate.Height = 24;
-            this.dtGrView_NhanVien.Size = new System.Drawing.Size(790, 331);
+            this.dtGrView_NhanVien.Size = new System.Drawing.Size(592, 315);
             this.dtGrView_NhanVien.TabIndex = 0;
             this.dtGrView_NhanVien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGrView_NhanVien_CellContentClick);
             // 
@@ -50,9 +51,10 @@
             // 
             this.btnLoad.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoad.Location = new System.Drawing.Point(66, 28);
+            this.btnLoad.Location = new System.Drawing.Point(2, 2);
+            this.btnLoad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(169, 50);
+            this.btnLoad.Size = new System.Drawing.Size(178, 41);
             this.btnLoad.TabIndex = 1;
             this.btnLoad.Text = "Load danh sách nhân viên";
             this.btnLoad.UseVisualStyleBackColor = false;
@@ -62,9 +64,10 @@
             // 
             this.btnCreateNV.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnCreateNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreateNV.Location = new System.Drawing.Point(552, 28);
+            this.btnCreateNV.Location = new System.Drawing.Point(384, 2);
+            this.btnCreateNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCreateNV.Name = "btnCreateNV";
-            this.btnCreateNV.Size = new System.Drawing.Size(169, 50);
+            this.btnCreateNV.Size = new System.Drawing.Size(206, 41);
             this.btnCreateNV.TabIndex = 2;
             this.btnCreateNV.Text = "Thêm nhân viên mới";
             this.btnCreateNV.UseVisualStyleBackColor = false;
@@ -74,9 +77,10 @@
             // 
             this.btnEditDeleteNV.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnEditDeleteNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditDeleteNV.Location = new System.Drawing.Point(311, 28);
+            this.btnEditDeleteNV.Location = new System.Drawing.Point(184, 2);
+            this.btnEditDeleteNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEditDeleteNV.Name = "btnEditDeleteNV";
-            this.btnEditDeleteNV.Size = new System.Drawing.Size(169, 50);
+            this.btnEditDeleteNV.Size = new System.Drawing.Size(196, 41);
             this.btnEditDeleteNV.TabIndex = 3;
             this.btnEditDeleteNV.Text = "Sửa, xóa nhân viên";
             this.btnEditDeleteNV.UseVisualStyleBackColor = false;
@@ -84,15 +88,15 @@
             // 
             // QLNhanSu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnEditDeleteNV);
             this.Controls.Add(this.btnCreateNV);
             this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.dtGrView_NhanVien);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "QLNhanSu";
-            this.Size = new System.Drawing.Size(790, 445);
+            this.Size = new System.Drawing.Size(592, 362);
+            this.Load += new System.EventHandler(this.QLNhanSu_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dtGrView_NhanVien)).EndInit();
             this.ResumeLayout(false);
 
