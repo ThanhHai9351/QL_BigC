@@ -62,10 +62,10 @@
             // panelContainer
             // 
             this.panelContainer.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelContainer.Location = new System.Drawing.Point(0, 57);
-            this.panelContainer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelContainer.Location = new System.Drawing.Point(0, 56);
+            this.panelContainer.Margin = new System.Windows.Forms.Padding(4);
             this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(787, 374);
+            this.panelContainer.Size = new System.Drawing.Size(787, 422);
             this.panelContainer.TabIndex = 7;
             this.panelContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContainer_Paint);
             // 
@@ -76,9 +76,9 @@
             this.Controls.Add(this.panelContainer);
             this.Controls.Add(this.btnSeeOrder);
             this.Controls.Add(this.btnOrder);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "QLHangKho";
-            this.Size = new System.Drawing.Size(787, 431);
+            this.Size = new System.Drawing.Size(787, 478);
             this.Load += new System.EventHandler(this.QLHangKho_Load);
             this.ResumeLayout(false);
 

@@ -38,8 +38,8 @@ namespace Big_C
             this.btnChamCong = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panelContainer = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panelContainer = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -56,7 +56,7 @@ namespace Big_C
             this.panelMenu.Controls.Add(this.btnChamCong);
             this.panelMenu.Controls.Add(this.btnHome);
             this.panelMenu.Location = new System.Drawing.Point(1, 1);
-            this.panelMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelMenu.Margin = new System.Windows.Forms.Padding(4);
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(212, 491);
             this.panelMenu.TabIndex = 0;
@@ -68,7 +68,7 @@ namespace Big_C
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.Black;
             this.btnExit.Location = new System.Drawing.Point(0, 437);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(4);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(212, 54);
             this.btnExit.TabIndex = 6;
@@ -82,7 +82,7 @@ namespace Big_C
             this.btnSupport.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSupport.ForeColor = System.Drawing.Color.Black;
             this.btnSupport.Location = new System.Drawing.Point(0, 338);
-            this.btnSupport.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSupport.Margin = new System.Windows.Forms.Padding(4);
             this.btnSupport.Name = "btnSupport";
             this.btnSupport.Size = new System.Drawing.Size(212, 54);
             this.btnSupport.TabIndex = 5;
@@ -96,7 +96,7 @@ namespace Big_C
             this.btnQLNhanSu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLNhanSu.ForeColor = System.Drawing.Color.Black;
             this.btnQLNhanSu.Location = new System.Drawing.Point(0, 289);
-            this.btnQLNhanSu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnQLNhanSu.Margin = new System.Windows.Forms.Padding(4);
             this.btnQLNhanSu.Name = "btnQLNhanSu";
             this.btnQLNhanSu.Size = new System.Drawing.Size(212, 54);
             this.btnQLNhanSu.TabIndex = 4;
@@ -110,7 +110,7 @@ namespace Big_C
             this.btnQuanLyLichLam.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuanLyLichLam.ForeColor = System.Drawing.Color.Black;
             this.btnQuanLyLichLam.Location = new System.Drawing.Point(0, 240);
-            this.btnQuanLyLichLam.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnQuanLyLichLam.Margin = new System.Windows.Forms.Padding(4);
             this.btnQuanLyLichLam.Name = "btnQuanLyLichLam";
             this.btnQuanLyLichLam.Size = new System.Drawing.Size(212, 54);
             this.btnQuanLyLichLam.TabIndex = 3;
@@ -124,7 +124,7 @@ namespace Big_C
             this.btnQLHangKho.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLHangKho.ForeColor = System.Drawing.Color.Black;
             this.btnQLHangKho.Location = new System.Drawing.Point(0, 191);
-            this.btnQLHangKho.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnQLHangKho.Margin = new System.Windows.Forms.Padding(4);
             this.btnQLHangKho.Name = "btnQLHangKho";
             this.btnQLHangKho.Size = new System.Drawing.Size(212, 54);
             this.btnQLHangKho.TabIndex = 2;
@@ -138,7 +138,7 @@ namespace Big_C
             this.btnChamCong.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChamCong.ForeColor = System.Drawing.Color.Black;
             this.btnChamCong.Location = new System.Drawing.Point(0, 144);
-            this.btnChamCong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnChamCong.Margin = new System.Windows.Forms.Padding(4);
             this.btnChamCong.Name = "btnChamCong";
             this.btnChamCong.Size = new System.Drawing.Size(212, 54);
             this.btnChamCong.TabIndex = 1;
@@ -152,7 +152,7 @@ namespace Big_C
             this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.ForeColor = System.Drawing.Color.Black;
             this.btnHome.Location = new System.Drawing.Point(0, 94);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(4);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(212, 59);
             this.btnHome.TabIndex = 0;
@@ -165,21 +165,10 @@ namespace Big_C
             this.panel2.BackColor = System.Drawing.Color.DarkOrange;
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Location = new System.Drawing.Point(1, 1);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(212, 101);
             this.panel2.TabIndex = 0;
-            // 
-            // panelContainer
-            // 
-            this.panelContainer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panelContainer.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelContainer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelContainer.Location = new System.Drawing.Point(212, 0);
-            this.panelContainer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(728, 491);
-            this.panelContainer.TabIndex = 1;
             // 
             // pictureBox1
             // 
@@ -192,6 +181,17 @@ namespace Big_C
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // panelContainer
+            // 
+            this.panelContainer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panelContainer.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelContainer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelContainer.Location = new System.Drawing.Point(212, 0);
+            this.panelContainer.Margin = new System.Windows.Forms.Padding(4);
+            this.panelContainer.Name = "panelContainer";
+            this.panelContainer.Size = new System.Drawing.Size(728, 491);
+            this.panelContainer.TabIndex = 1;
+            // 
             // TrangChu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -200,7 +200,7 @@ namespace Big_C
             this.Controls.Add(this.panelContainer);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panelMenu);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TrangChu";
             this.Text = "TrangChu";
             this.Load += new System.EventHandler(this.TrangChu_Load);

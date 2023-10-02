@@ -77,12 +77,6 @@ namespace Big_C.UserControls
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            
-
-        }
-
-        private void btnTimKiem_Click_1(object sender, EventArgs e)
-        {
             if (connection == null)
             {
                 connection = new SqlConnection(strcon);
@@ -120,5 +114,7 @@ namespace Big_C.UserControls
             }
             reader.Close();
         }
+
+        
     }
 }

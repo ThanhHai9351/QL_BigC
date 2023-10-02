@@ -16,5 +16,16 @@ namespace Big_C.UserControls
         {
             InitializeComponent();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPhanHoi_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Cảm ơn bạn đã gửi phản hồi . Chúng tôi sẽ khắc phục sớm nhất có thể!");
+            txtHoTro.Text = "";
+        }
     }
 }
