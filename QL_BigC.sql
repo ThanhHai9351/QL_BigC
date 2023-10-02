@@ -84,13 +84,14 @@ create table HangHoa
 
 create table PhieuMuaHang
 (
-	MaPhieu char(10) primary key,
+	MaPhieu char(10),
 	MaHangHoa char(10),
 	MaNhaCungCap char(10),
 	NgayDat DateTime,
 	NgayGiao DateTime,
 	SoLuong int,
 	TongTien int,
+	Mota nvarchar(100),
 	constraint FK_PhieuMuaHang_HangHoa foreign key (MaHangHoa) references HangHoa(MaHangHoa),
 	constraint FK_PhieuMuaHang_NhaCungCap foreign key (MaNhaCungCap) references NhaCungCap(MaNhaCungCap)
 
@@ -128,4 +129,11 @@ insert into HangHoa values
 ('HH06',N'Chanh Giay',23000,'NC05'),
 ('HH07',N'Muoi',23000,'NC05'),
 ('HH08',N'Oreo Cay',23000,'NC05')
+
+select PhieuMuaHang.MaPhieu from PhieuMuaHang 
+Group by PhieuMuaHang.MaPhieu
+
+select * from PhieuMuaHang
+where PhieuMuaHang.MaPhieu = 'PH005'
+
 

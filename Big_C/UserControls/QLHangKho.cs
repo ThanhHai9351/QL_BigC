@@ -43,12 +43,9 @@ namespace Big_C.UserControls
             addUserControl(frm);
         }
 
-        private void btnCreateNV_Click(object sender, EventArgs e)
+        private void panelContainer_Paint(object sender, PaintEventArgs e)
         {
-            TonKho frm = new TonKho();
-            addUserControl(frm);
+
         }
-
-
     }
 }

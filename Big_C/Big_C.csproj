@@ -74,6 +74,7 @@
     <Compile Include="Model\HangHoa.cs" />
     <Compile Include="Model\NhaCungCap.cs" />
     <Compile Include="Model\NhanVien.cs" />
+    <Compile Include="Model\PhieuHangHoa.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Forms\TrangChu.cs">
@@ -123,12 +124,6 @@
     </Compile>
     <Compile Include="UserControls\Suppport.Designer.cs">
       <DependentUpon>Suppport.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\TonKho.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\TonKho.Designer.cs">
-      <DependentUpon>TonKho.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\ViewOrder.cs">
       <SubType>UserControl</SubType>
@@ -181,9 +176,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Suppport.resx">
       <DependentUpon>Suppport.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\TonKho.resx">
-      <DependentUpon>TonKho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ViewOrder.resx">
       <DependentUpon>ViewOrder.cs</DependentUpon>
