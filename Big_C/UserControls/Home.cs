@@ -47,10 +47,15 @@ namespace Big_C.UserControls
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            
+        
         }
 
         private void btnHangHoa_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
         {
 
         }

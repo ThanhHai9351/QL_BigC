@@ -21,7 +21,7 @@ namespace Big_C.UserControls
 
         List<NhaCungCap> lncc = new List<NhaCungCap>();
         List<HangHoa> lhh = new List<HangHoa>();
-        string strcon = "SERVER = ADUMOIMOIMOI; DATABASE = QL_BigC; Integrated Security = TRUE";
+        string strcon = "SERVER = THANHHAI; DATABASE = QL_BigC; Integrated Security = TRUE";
         SqlConnection connection = null;
        
         private void EnterOrder_Load(object sender, EventArgs e)

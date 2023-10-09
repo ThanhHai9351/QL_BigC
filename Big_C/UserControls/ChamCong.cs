@@ -21,7 +21,7 @@ namespace Big_C.UserControls
         }
 
         List<NhanVien> lnv = new List<NhanVien>();
-        string strcon = "SERVER = ADUMOIMOIMOI; DATABASE = QL_BigC; Integrated Security = TRUE";
+        string strcon = "SERVER = THANHHAI; DATABASE = QL_BigC; Integrated Security = TRUE";
         SqlConnection connection = null;
         private void ChamCong_Load(object sender, EventArgs e)
         {
@@ -115,6 +115,9 @@ namespace Big_C.UserControls
             reader.Close();
         }
 
-        
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

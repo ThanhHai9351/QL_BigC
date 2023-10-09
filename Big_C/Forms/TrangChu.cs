@@ -176,5 +176,20 @@ namespace Big_C
         {
 
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void TrangChu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult exit;
+            exit = MessageBox.Show("Bạn có chắc muốn thoát!", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (exit == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+        }
     }
 }

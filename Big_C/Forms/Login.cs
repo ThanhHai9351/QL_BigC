@@ -51,6 +51,7 @@ namespace Big_C
             {
                 TrangChu frm = new TrangChu();
                 frm.Show();
+                this.Hide();
             }
 
         }

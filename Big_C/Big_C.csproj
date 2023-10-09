@@ -197,7 +197,6 @@
     <Content Include="Image\background.jpg" />
     <Content Include="Image\BigC.jpg" />
     <Content Include="Image\exit.png" />
-    <Content Include="Image\Hethong.jpg" />
     <Content Include="Image\hethong.png" />
     <Content Include="Image\home.png" />
     <Content Include="Image\lich.png" />

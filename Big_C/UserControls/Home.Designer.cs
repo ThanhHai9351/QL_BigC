@@ -58,7 +58,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Firebrick;
-            this.label1.Location = new System.Drawing.Point(15, 16);
+            this.label1.Location = new System.Drawing.Point(17, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(159, 36);
             this.label1.TabIndex = 0;
@@ -75,9 +75,9 @@
             this.btnChamCong.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnChamCong.ImageKey = "(none)";
             this.btnChamCong.ImageList = this.imageList1;
-            this.btnChamCong.Location = new System.Drawing.Point(54, 87);
+            this.btnChamCong.Location = new System.Drawing.Point(62, 82);
             this.btnChamCong.Name = "btnChamCong";
-            this.btnChamCong.Size = new System.Drawing.Size(305, 155);
+            this.btnChamCong.Size = new System.Drawing.Size(349, 146);
             this.btnChamCong.TabIndex = 2;
             this.btnChamCong.Text = "Chấm Công";
             this.btnChamCong.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -101,9 +101,9 @@
             this.btnHangHoa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHangHoa.Font = new System.Drawing.Font("Sans Serif Collection", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHangHoa.ForeColor = System.Drawing.Color.White;
-            this.btnHangHoa.Location = new System.Drawing.Point(427, 87);
+            this.btnHangHoa.Location = new System.Drawing.Point(488, 82);
             this.btnHangHoa.Name = "btnHangHoa";
-            this.btnHangHoa.Size = new System.Drawing.Size(305, 155);
+            this.btnHangHoa.Size = new System.Drawing.Size(349, 146);
             this.btnHangHoa.TabIndex = 3;
             this.btnHangHoa.Text = "Quản lý kho";
             this.btnHangHoa.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -116,9 +116,9 @@
             this.btnLichLam.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLichLam.Font = new System.Drawing.Font("Sans Serif Collection", 7.8F, System.Drawing.FontStyle.Bold);
             this.btnLichLam.ForeColor = System.Drawing.Color.White;
-            this.btnLichLam.Location = new System.Drawing.Point(54, 264);
+            this.btnLichLam.Location = new System.Drawing.Point(62, 248);
             this.btnLichLam.Name = "btnLichLam";
-            this.btnLichLam.Size = new System.Drawing.Size(305, 155);
+            this.btnLichLam.Size = new System.Drawing.Size(349, 146);
             this.btnLichLam.TabIndex = 4;
             this.btnLichLam.Text = "Lịch Làm";
             this.btnLichLam.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -130,9 +130,9 @@
             this.btnNhanSu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNhanSu.Font = new System.Drawing.Font("Sans Serif Collection", 7.8F, System.Drawing.FontStyle.Bold);
             this.btnNhanSu.ForeColor = System.Drawing.Color.White;
-            this.btnNhanSu.Location = new System.Drawing.Point(427, 264);
+            this.btnNhanSu.Location = new System.Drawing.Point(488, 248);
             this.btnNhanSu.Name = "btnNhanSu";
-            this.btnNhanSu.Size = new System.Drawing.Size(305, 155);
+            this.btnNhanSu.Size = new System.Drawing.Size(349, 146);
             this.btnNhanSu.TabIndex = 5;
             this.btnNhanSu.Text = "Nhân Sự";
             this.btnNhanSu.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -144,9 +144,9 @@
             this.btnSupport.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSupport.Font = new System.Drawing.Font("Sans Serif Collection", 7.8F, System.Drawing.FontStyle.Bold);
             this.btnSupport.ForeColor = System.Drawing.Color.White;
-            this.btnSupport.Location = new System.Drawing.Point(54, 441);
+            this.btnSupport.Location = new System.Drawing.Point(62, 415);
             this.btnSupport.Name = "btnSupport";
-            this.btnSupport.Size = new System.Drawing.Size(305, 155);
+            this.btnSupport.Size = new System.Drawing.Size(349, 146);
             this.btnSupport.TabIndex = 6;
             this.btnSupport.Text = "Hỗ Trợ";
             this.btnSupport.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -158,9 +158,9 @@
             this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExit.Font = new System.Drawing.Font("Sans Serif Collection", 7.8F, System.Drawing.FontStyle.Bold);
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(427, 441);
+            this.btnExit.Location = new System.Drawing.Point(488, 415);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(305, 155);
+            this.btnExit.Size = new System.Drawing.Size(349, 146);
             this.btnExit.TabIndex = 7;
             this.btnExit.Text = "Thoát";
             this.btnExit.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -171,9 +171,9 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Firebrick;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(164, 123);
+            this.pictureBox2.Location = new System.Drawing.Point(187, 116);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(82, 70);
+            this.pictureBox2.Size = new System.Drawing.Size(94, 66);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 8;
             this.pictureBox2.TabStop = false;
@@ -182,9 +182,9 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Firebrick;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(535, 311);
+            this.pictureBox3.Location = new System.Drawing.Point(611, 293);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(82, 70);
+            this.pictureBox3.Size = new System.Drawing.Size(94, 66);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 9;
             this.pictureBox3.TabStop = false;
@@ -193,9 +193,9 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Firebrick;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(533, 123);
+            this.pictureBox4.Location = new System.Drawing.Point(609, 116);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(84, 70);
+            this.pictureBox4.Size = new System.Drawing.Size(96, 66);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 10;
             this.pictureBox4.TabStop = false;
@@ -204,9 +204,9 @@
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Firebrick;
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(164, 482);
+            this.pictureBox5.Location = new System.Drawing.Point(187, 454);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(82, 70);
+            this.pictureBox5.Size = new System.Drawing.Size(94, 66);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 11;
             this.pictureBox5.TabStop = false;
@@ -215,9 +215,9 @@
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.Firebrick;
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(164, 311);
+            this.pictureBox6.Location = new System.Drawing.Point(187, 293);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(82, 70);
+            this.pictureBox6.Size = new System.Drawing.Size(94, 66);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 12;
             this.pictureBox6.TabStop = false;
@@ -227,16 +227,17 @@
             this.pictureBox7.BackColor = System.Drawing.Color.Firebrick;
             this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(535, 482);
+            this.pictureBox7.Location = new System.Drawing.Point(611, 454);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(82, 70);
+            this.pictureBox7.Size = new System.Drawing.Size(94, 66);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 13;
             this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
             // 
             // Home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Controls.Add(this.pictureBox7);
@@ -252,9 +253,9 @@
             this.Controls.Add(this.btnHangHoa);
             this.Controls.Add(this.btnChamCong);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "Home";
-            this.Size = new System.Drawing.Size(797, 672);
+            this.Size = new System.Drawing.Size(911, 632);
             this.Load += new System.EventHandler(this.Home_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

@@ -20,7 +20,7 @@ namespace Big_C.UserControls
             InitializeComponent();
         }
 
-        string strcon = "SERVER = ADUMOIMOIMOI; DATABASE = QL_BigC; Integrated Security = TRUE";
+        string strcon = "SERVER = THANHHAI; DATABASE = QL_BigC; Integrated Security = TRUE";
         SqlConnection connection = null;
 
         private void ViewOrder_Load(object sender, EventArgs e)
@@ -38,13 +38,13 @@ namespace Big_C.UserControls
             command.CommandText = "select MaPhieu,MaNhaCungCap from PhieuMuaHang Group by MaPhieu,MaNhaCungCap";
             command.Connection = connection;
             SqlDataReader reader = command.ExecuteReader();
-            int widthY = 100;
+            int widthY = 0;
             while(reader.Read())
             {
                 Button btnMaPhieu = new Button();
                 btnMaPhieu.Name = reader.GetString(0);
                 btnMaPhieu.Text = reader.GetString(0);
-                btnMaPhieu.Location = new Point(10,widthY);
+                btnMaPhieu.Location = new Point(100,widthY);
                 btnMaPhieu.Size = new Size(500,30);
                 btnMaPhieu.Click += new EventHandler(btnMaPhieu_Click);
                 this.Controls.Add(btnMaPhieu);
