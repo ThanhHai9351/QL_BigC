@@ -20,7 +20,7 @@ namespace Big_C.UserControls
             InitializeComponent();
         }
 
-        string strcon = "SERVER = THANHHAI; DATABASE = QL_BigC; Integrated Security = TRUE";
+        string strcon = "SERVER = ADUMOIMOIMOI; DATABASE = QL_BigC; Integrated Security = TRUE";
         SqlConnection connection = null;
 
         private void ViewOrder_Load(object sender, EventArgs e)

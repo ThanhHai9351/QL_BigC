@@ -49,5 +49,10 @@ namespace Big_C.UserControls
         {
             
         }
+
+        private void btnHangHoa_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

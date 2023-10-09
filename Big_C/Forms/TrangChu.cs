@@ -172,6 +172,9 @@ namespace Big_C
 
         }
 
+        private void panelContainer_Paint(object sender, PaintEventArgs e)
+        {
 
+        }
     }
 }

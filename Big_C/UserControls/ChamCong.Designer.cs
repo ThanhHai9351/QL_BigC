@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.btnThanhToan = new System.Windows.Forms.Button();
             this.txtTongLuong = new System.Windows.Forms.TextBox();
@@ -47,13 +46,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.v = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
-            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.btnTimKiem);
             this.panel1.Controls.Add(this.btnThanhToan);
             this.panel1.Controls.Add(this.txtTongLuong);
@@ -73,38 +70,29 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(725, 554);
+            this.panel1.Size = new System.Drawing.Size(634, 589);
             this.panel1.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Big_C.Properties.Resources.BigC;
-            this.pictureBox1.InitialImage = global::Big_C.Properties.Resources.BigC;
-            this.pictureBox1.Location = new System.Drawing.Point(522, 2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(183, 128);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 60;
-            this.pictureBox1.TabStop = false;
             // 
             // btnTimKiem
             // 
-            this.btnTimKiem.Location = new System.Drawing.Point(223, 51);
+            this.btnTimKiem.BackColor = System.Drawing.Color.Firebrick;
+            this.btnTimKiem.ForeColor = System.Drawing.Color.White;
+            this.btnTimKiem.Location = new System.Drawing.Point(325, 87);
             this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(238, 37);
+            this.btnTimKiem.Size = new System.Drawing.Size(122, 39);
             this.btnTimKiem.TabIndex = 59;
             this.btnTimKiem.Text = "Tìm kiếm";
-            this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.UseVisualStyleBackColor = false;
             this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // btnThanhToan
             // 
-            this.btnThanhToan.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnThanhToan.BackColor = System.Drawing.Color.Firebrick;
             this.btnThanhToan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThanhToan.Location = new System.Drawing.Point(154, 384);
+            this.btnThanhToan.ForeColor = System.Drawing.Color.White;
+            this.btnThanhToan.Location = new System.Drawing.Point(194, 436);
             this.btnThanhToan.Name = "btnThanhToan";
-            this.btnThanhToan.Size = new System.Drawing.Size(208, 56);
+            this.btnThanhToan.Size = new System.Drawing.Size(225, 99);
             this.btnThanhToan.TabIndex = 58;
             this.btnThanhToan.Text = "Thanh toán lương";
             this.btnThanhToan.UseVisualStyleBackColor = false;
@@ -113,57 +101,57 @@
             // txtTongLuong
             // 
             this.txtTongLuong.Enabled = false;
-            this.txtTongLuong.Location = new System.Drawing.Point(200, 330);
+            this.txtTongLuong.Location = new System.Drawing.Point(262, 364);
             this.txtTongLuong.Name = "txtTongLuong";
-            this.txtTongLuong.Size = new System.Drawing.Size(286, 22);
+            this.txtTongLuong.Size = new System.Drawing.Size(251, 25);
             this.txtTongLuong.TabIndex = 57;
             // 
             // txtSoGioLam
             // 
             this.txtSoGioLam.Enabled = false;
-            this.txtSoGioLam.Location = new System.Drawing.Point(200, 279);
+            this.txtSoGioLam.Location = new System.Drawing.Point(262, 315);
             this.txtSoGioLam.Name = "txtSoGioLam";
-            this.txtSoGioLam.Size = new System.Drawing.Size(286, 22);
+            this.txtSoGioLam.Size = new System.Drawing.Size(251, 25);
             this.txtSoGioLam.TabIndex = 56;
             // 
             // txtPhone
             // 
             this.txtPhone.Enabled = false;
-            this.txtPhone.Location = new System.Drawing.Point(200, 185);
+            this.txtPhone.Location = new System.Drawing.Point(262, 225);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(286, 22);
+            this.txtPhone.Size = new System.Drawing.Size(251, 25);
             this.txtPhone.TabIndex = 55;
             // 
             // txtLuongTrenGio
             // 
             this.txtLuongTrenGio.Enabled = false;
-            this.txtLuongTrenGio.Location = new System.Drawing.Point(200, 227);
+            this.txtLuongTrenGio.Location = new System.Drawing.Point(262, 269);
             this.txtLuongTrenGio.Name = "txtLuongTrenGio";
-            this.txtLuongTrenGio.Size = new System.Drawing.Size(286, 22);
+            this.txtLuongTrenGio.Size = new System.Drawing.Size(251, 25);
             this.txtLuongTrenGio.TabIndex = 54;
             this.txtLuongTrenGio.Text = "24.000đ";
             // 
             // txtCCCD
             // 
             this.txtCCCD.Enabled = false;
-            this.txtCCCD.Location = new System.Drawing.Point(200, 143);
+            this.txtCCCD.Location = new System.Drawing.Point(262, 184);
             this.txtCCCD.Name = "txtCCCD";
-            this.txtCCCD.Size = new System.Drawing.Size(286, 22);
+            this.txtCCCD.Size = new System.Drawing.Size(251, 25);
             this.txtCCCD.TabIndex = 53;
             // 
             // txtName
             // 
             this.txtName.Enabled = false;
-            this.txtName.Location = new System.Drawing.Point(200, 106);
+            this.txtName.Location = new System.Drawing.Point(262, 145);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(286, 22);
+            this.txtName.Size = new System.Drawing.Size(251, 25);
             this.txtName.TabIndex = 52;
             // 
             // txtMa
             // 
-            this.txtMa.Location = new System.Drawing.Point(200, 23);
+            this.txtMa.Location = new System.Drawing.Point(262, 56);
             this.txtMa.Name = "txtMa";
-            this.txtMa.Size = new System.Drawing.Size(286, 22);
+            this.txtMa.Size = new System.Drawing.Size(251, 25);
             this.txtMa.TabIndex = 51;
             // 
             // label8
@@ -172,7 +160,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label8.Location = new System.Drawing.Point(31, 332);
+            this.label8.Location = new System.Drawing.Point(114, 365);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(107, 20);
             this.label8.TabIndex = 50;
@@ -184,7 +172,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label7.Location = new System.Drawing.Point(31, 281);
+            this.label7.Location = new System.Drawing.Point(114, 316);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(98, 20);
             this.label7.TabIndex = 49;
@@ -196,7 +184,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(31, 231);
+            this.label6.Location = new System.Drawing.Point(114, 270);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(136, 20);
             this.label6.TabIndex = 48;
@@ -208,7 +196,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(31, 187);
+            this.label5.Location = new System.Drawing.Point(114, 226);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 20);
             this.label5.TabIndex = 47;
@@ -220,7 +208,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(31, 147);
+            this.label3.Location = new System.Drawing.Point(114, 185);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(68, 20);
             this.label3.TabIndex = 46;
@@ -232,7 +220,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(31, 110);
+            this.label2.Location = new System.Drawing.Point(114, 146);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(132, 20);
             this.label2.TabIndex = 45;
@@ -244,7 +232,7 @@
             this.v.BackColor = System.Drawing.Color.Transparent;
             this.v.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.v.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.v.Location = new System.Drawing.Point(31, 25);
+            this.v.Location = new System.Drawing.Point(114, 59);
             this.v.Name = "v";
             this.v.Size = new System.Drawing.Size(126, 20);
             this.v.TabIndex = 44;
@@ -252,18 +240,17 @@
             // 
             // ChamCong
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ChamCong";
-            this.Size = new System.Drawing.Size(725, 554);
+            this.Size = new System.Drawing.Size(634, 589);
             this.Load += new System.EventHandler(this.ChamCong_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -287,6 +274,5 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label v;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
