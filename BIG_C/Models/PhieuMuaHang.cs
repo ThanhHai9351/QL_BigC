@@ -9,6 +9,8 @@ namespace BIG_C.Models
     public class PhieuMuaHang
     {
         public string MaPhieu { get; set; }
+        
+        public string MaChiNhanh { get; set; }
 
         public string MaHangHoa { get; set; }
 

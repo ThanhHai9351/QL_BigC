@@ -47,7 +47,7 @@ namespace BIG_C.UserControls
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label1);
             this.Name = "Home";
-            this.Size = new System.Drawing.Size(934, 581);
+            this.Size = new System.Drawing.Size(934, 658);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -292,7 +292,7 @@ namespace BIG_C.Models
             return phieuLuongs;
         }
 
-        public List<PhieuMuaHang> PhieuMuaHangs()
+        public List<PhieuMuaHang> GetPhieuMuaHangs()
         {
             if (connection == null)
             {
@@ -313,12 +313,13 @@ namespace BIG_C.Models
             {
                 PhieuMuaHang ph = new PhieuMuaHang();
                 ph.MaPhieu = reader.GetString(0);
-                ph.MaHangHoa = reader.GetString(1);
-                ph.NgayDat = reader.GetDateTime(2);
-                ph.NgayGiao = reader.GetDateTime(3);
-                ph.SoLuong = reader.GetInt32(4);
-                ph.TongTien = reader.GetInt32(5);
-                ph.MoTa = reader.GetString(6);
+                ph.MaChiNhanh = reader.GetString(1);
+                ph.MaHangHoa = reader.GetString(2);
+                ph.NgayDat = reader.GetDateTime(3);
+                ph.NgayGiao = reader.GetDateTime(4);
+                ph.SoLuong = reader.GetInt32(5);
+                ph.TongTien = reader.GetInt32(6);
+                ph.MoTa = reader.GetString(7);
                 phieuMuaHangs.Add(ph);
             }
             reader.Close();
@@ -399,6 +400,71 @@ namespace BIG_C.Models
                 }    
             }
             return "";
+        }
+
+        public string GetIDChiNhanh(string name)
+        {
+            List<ChiNhanh> chiNhanhs = GetChiNhanhs();
+            foreach (var item in chiNhanhs)
+            {
+                if (item.TenChiNhanh.TrimEnd() == name.TrimEnd())
+                {
+                    return item.MaChiNhanh;
+                }
+            }
+            return "0";
+        }
+
+        public string GetNameNhanVien (string id)
+        {
+            List<NhanVien> nhanViens = GetNhanViens();
+            foreach(var item in nhanViens)
+            {
+                if(item.MaNhanVien.TrimEnd()== id.TrimEnd())
+                {
+                    return item.TenNhanVien;
+                }    
+            }
+            return "";
+        }
+
+        public string GetNameHangHoa(string id)
+        {
+            List<HangHoa> hangHoas = GetHangHoas();
+            foreach (var item in hangHoas)
+            {
+                if (item.MaHangHoa.TrimEnd() == id.TrimEnd())
+                {
+                    return item.TenHangHoa;
+                }
+            }
+            return "";
+        }
+
+        public string GetIDHangHoa(string name)
+        {
+            List<HangHoa> hangHoas = GetHangHoas();
+            foreach (var item in hangHoas)
+            {
+                if (item.TenHangHoa.TrimEnd() == name.TrimEnd())
+                {
+                    return item.MaHangHoa;
+                }
+            }
+            return "";
+        }
+
+        public int GetPriceHangHoa(string id)
+        {
+            List<HangHoa> hangHoas = GetHangHoas();
+            foreach (var item in hangHoas)
+            {
+                if (item.MaHangHoa.TrimEnd() == id.TrimEnd())
+                {
+                    return item.DonGia;
+                }
+            }
+            return 0;
         }
     }
 }

@@ -37,5 +37,17 @@ namespace BIG_C.Forms
             QuanLy frm = new QuanLy();
             addUserControl(frm);
         }
+
+        private void btnLichLam_Click(object sender, EventArgs e)
+        {
+            LichLams frm = new LichLams();
+            addUserControl(frm);
+        }
+
+        private void btnKho_Click(object sender, EventArgs e)
+        {
+            Store frm = new Store();
+            addUserControl(frm);
+        }
     }
 }

@@ -32,17 +32,17 @@ namespace BIG_C.Forms
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAdmin));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnExit = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panelContainer = new System.Windows.Forms.Panel();
+            this.btnExit = new System.Windows.Forms.Button();
             this.btnQuanLy = new System.Windows.Forms.Button();
             this.btnLichSuBan = new System.Windows.Forms.Button();
             this.btnKho = new System.Windows.Forms.Button();
             this.btnLichLam = new System.Windows.Forms.Button();
             this.btnTinhLuong = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panelContainer = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -64,6 +64,35 @@ namespace BIG_C.Forms
             this.panel1.Size = new System.Drawing.Size(207, 658);
             this.panel1.TabIndex = 0;
             // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "house.png");
+            this.imageList1.Images.SetKeyName(1, "salary.png");
+            this.imageList1.Images.SetKeyName(2, "schedule.png");
+            this.imageList1.Images.SetKeyName(3, "shop.png");
+            this.imageList1.Images.SetKeyName(4, "history.png");
+            this.imageList1.Images.SetKeyName(5, "management.png");
+            this.imageList1.Images.SetKeyName(6, "log-out.png");
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(207, 100);
+            this.panel2.TabIndex = 0;
+            // 
+            // panelContainer
+            // 
+            this.panelContainer.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelContainer.Location = new System.Drawing.Point(207, 0);
+            this.panelContainer.Name = "panelContainer";
+            this.panelContainer.Size = new System.Drawing.Size(934, 658);
+            this.panelContainer.TabIndex = 1;
+            // 
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.Color.Red;
@@ -82,18 +111,6 @@ namespace BIG_C.Forms
             this.btnExit.Text = "EXIT";
             this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExit.UseVisualStyleBackColor = false;
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "house.png");
-            this.imageList1.Images.SetKeyName(1, "salary.png");
-            this.imageList1.Images.SetKeyName(2, "schedule.png");
-            this.imageList1.Images.SetKeyName(3, "shop.png");
-            this.imageList1.Images.SetKeyName(4, "history.png");
-            this.imageList1.Images.SetKeyName(5, "management.png");
-            this.imageList1.Images.SetKeyName(6, "log-out.png");
             // 
             // btnQuanLy
             // 
@@ -152,6 +169,7 @@ namespace BIG_C.Forms
             this.btnKho.Text = "Kho";
             this.btnKho.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnKho.UseVisualStyleBackColor = false;
+            this.btnKho.Click += new System.EventHandler(this.btnKho_Click);
             // 
             // btnLichLam
             // 
@@ -171,6 +189,7 @@ namespace BIG_C.Forms
             this.btnLichLam.Text = "Lịch Làm";
             this.btnLichLam.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLichLam.UseVisualStyleBackColor = false;
+            this.btnLichLam.Click += new System.EventHandler(this.btnLichLam_Click);
             // 
             // btnTinhLuong
             // 
@@ -210,15 +229,6 @@ namespace BIG_C.Forms
             this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHome.UseVisualStyleBackColor = false;
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(207, 100);
-            this.panel2.TabIndex = 0;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -229,14 +239,6 @@ namespace BIG_C.Forms
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // panelContainer
-            // 
-            this.panelContainer.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelContainer.Location = new System.Drawing.Point(207, 0);
-            this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(934, 658);
-            this.panelContainer.TabIndex = 1;
             // 
             // FormAdmin
             // 

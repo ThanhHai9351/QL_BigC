@@ -44,6 +44,7 @@ namespace BIG_C.Forms
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.cboIsAdmin = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -180,11 +181,22 @@ namespace BIG_C.Forms
             this.label4.TabIndex = 9;
             this.label4.Text = "Phần mền tính lương Big C";
             // 
+            // cboIsAdmin
+            // 
+            this.cboIsAdmin.AutoSize = true;
+            this.cboIsAdmin.Location = new System.Drawing.Point(758, 125);
+            this.cboIsAdmin.Name = "cboIsAdmin";
+            this.cboIsAdmin.Size = new System.Drawing.Size(89, 21);
+            this.cboIsAdmin.TabIndex = 17;
+            this.cboIsAdmin.Text = "Là Admin";
+            this.cboIsAdmin.UseVisualStyleBackColor = true;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(891, 386);
+            this.Controls.Add(this.cboIsAdmin);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnLogin);
@@ -219,5 +231,6 @@ namespace BIG_C.Forms
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.CheckBox cboIsAdmin;
     }
 }
