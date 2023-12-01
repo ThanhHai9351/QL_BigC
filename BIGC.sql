@@ -64,6 +64,7 @@ create table HangHoa
 create table PhieuMuaHang
 (
     MaPhieu char(10),
+	MaChiNhanh char(10),
     MaHangHoa char(10),
     NgayDat DateTime,
     NgayGiao DateTime,
@@ -71,6 +72,7 @@ create table PhieuMuaHang
     TongTien int,
     Mota nvarchar(100),
     constraint FK_PhieuMuaHang_HangHoa foreign key (MaHangHoa) references HangHoa(MaHangHoa),
+	constraint PhieuMuahang_ChiNhanh foreign key(MaChiNhanh) references ChiNhanh(MaChiNhanh)
 )
 
 create table PhieuLuong
@@ -99,7 +101,6 @@ create table Kho
 create table PhieuBanHang
 (
 	MaPhieu char(10) primary key,
-	MaChiNhanh char(10),
     MaHangHoa char(10),
     MaNhanVien char(10),
     NgayBan DateTime,
@@ -107,7 +108,6 @@ create table PhieuBanHang
     TongTien int,
 	constraint FK_PhieuBanHang_NhanVien foreign key(MaNhanVien) references NhanVien(MaNhanVien),
 	constraint FK_PhieuBanHang_HangHoa foreign key(MaHangHoa) references HangHoa(MaHangHoa),
-	constraint FK_PhieuBanHang_ChiNhanh foreign key(MaChiNhanh) references ChiNhanh(MaChiNhanh)
 
 )
 
@@ -169,8 +169,8 @@ as
 begin 
 	declare @macn char(10),@mahh char(10), @sl int;
 	select @macn = MaChiNhanh, @mahh = MaHangHoa,@sl = SoLuong from inserted;
-	insert into Kho value (@macn,@mahh,@sl);
-end;
+	insert into Kho values (@macn,@mahh,@sl);
+end
 
 INSERT INTO TaiKhoan (MaTaiKhoan, TenTaiKhoan, LoaiTaiKhoan, SoDu)
 VALUES ('TK001', 'Tong cuc Big C', 'Thanh toan', 100000000);
