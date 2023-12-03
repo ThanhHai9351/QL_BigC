@@ -371,7 +371,7 @@ namespace BIG_C.Forms
             // 
             this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "add-user.png");
+            this.imageList1.Images.SetKeyName(0, "add.png");
             this.imageList1.Images.SetKeyName(1, "delete.png");
             // 
             // btnDelete

@@ -49,5 +49,30 @@ namespace BIG_C.Forms
             Store frm = new Store();
             addUserControl(frm);
         }
+
+        private void btnLichSuBan_Click(object sender, EventArgs e)
+        {
+            UserBanHang frm = new UserBanHang();
+            addUserControl(frm);
+        }
+
+        private void btnTinhLuong_Click(object sender, EventArgs e)
+        {
+            ChamCong frm = new ChamCong();
+            addUserControl(frm);
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            Home frm = new Home();
+            addUserControl(frm);
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Login frm = new Login();
+            frm.Show();
+            this.Hide();
+        }
     }
 }

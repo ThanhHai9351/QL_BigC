@@ -286,6 +286,7 @@ namespace BIG_C.Models
                 ph.TroCap = reader.GetInt32(6);
                 ph.TongLuong = reader.GetInt32(7);
                 ph.ThangLuong = reader.GetDateTime(8);
+                ph.TrangThai = reader.GetString(9);
                 phieuLuongs.Add(ph);
             }
             reader.Close();
@@ -383,7 +384,7 @@ namespace BIG_C.Models
                 tk.MaTaiKhoan = reader.GetString(0);
                 tk.TenTaiKhoan = reader.GetString(1);
                 tk.LoaiTaiKhoan = reader.GetString(2);
-                tk.SoDu = reader.GetInt32(3);
+                tk.SoDu = reader.GetInt64(3);
             }
             reader.Close();
             return tk;
@@ -413,6 +414,19 @@ namespace BIG_C.Models
                 }
             }
             return "0";
+        }
+
+        public string GetIDNhanVien(string name)
+        {
+            List<NhanVien> nhanViens = GetNhanViens();
+            foreach (var item in nhanViens)
+            {
+                if (item.TenNhanVien.TrimEnd() == name.TrimEnd())
+                {
+                    return item.MaNhanVien;
+                }
+            }
+            return "";
         }
 
         public string GetNameNhanVien (string id)
@@ -465,6 +479,42 @@ namespace BIG_C.Models
                 }
             }
             return 0;
+        }
+
+        public int GetSoSPDaBan()
+        {
+            List<PhieuBanHang> phieuBanHangs = GetPhieuBanHangs();
+            int sum = phieuBanHangs.Sum(row => row.SoLuong);
+            return sum;
+        }
+
+        public int GetSoTienDaBan()
+        {
+            List<PhieuBanHang> phieuBanHangs = GetPhieuBanHangs();
+            int sum = phieuBanHangs.Sum(row => row.TongTien);
+            return sum;
+        }
+
+        public int GetSoSPTrongKho()
+        {
+            List<Kho> khos = GetKhos();
+            int sum = khos.Sum(row => row.SoLuong);
+            return sum;
+        }
+
+        public int GetSoTienDaDat()
+        {
+            List<PhieuMuaHang> phieuMuaHangs = GetPhieuMuaHangs();
+            int sum = phieuMuaHangs.Sum(row => row.TongTien);
+            return sum;
+        }
+
+        public int GetAllLuongNhanVien()
+        {
+            List<PhieuLuong> phieuLuongs = GetPhieuLuongs();
+            phieuLuongs = phieuLuongs.Where(row => row.TrangThai.TrimEnd() == "Yes").ToList();
+            int sum = phieuLuongs.Sum(row => row.TongLuong);
+            return sum;
         }
     }
 }

@@ -3,12 +3,13 @@
 USE BigC
 GO
 
+
 create table TaiKhoan
 (
     MaTaiKhoan char(10) primary key,
     TenTaiKhoan nvarchar(100),
     LoaiTaiKhoan nvarchar(50) not null,
-    SoDu bigint not null
+    SoDu int not null
 )
 
 create table ChiNhanh 
@@ -86,10 +87,11 @@ create table PhieuLuong
 	TroCap int,
 	TongLuong int,
 	ThangLuong date,
+	TrangThai char(3),
 	constraint FK_PhieuLuong_NhanVien foreign key(MaNhanVien) references NhanVien(MaNhanVien)
 )
 
-create table Kho
+create table Kho	
 (
 	MaChiNhanh char(10),
 	MaHangHoa char(10),
@@ -274,22 +276,22 @@ INSERT INTO PhieuMuaHang (MaPhieu, MaChiNhanh,MaHangHoa, NgayDat, NgayGiao, SoLu
 VALUES  ('PMH02','CN002', 'HH002', '2023-03-05', '2023-03-20', 50, 7500, N'Mua hàng lần đầu')
 
 
-INSERT INTO PhieuLuong (MaPhieu, MaNhanVien, LuongHienTai, SoGioLam, SoGioTangCa, PhuCap, TroCap, TongLuong,ThangLuong)
-VALUES ('PL01', 'NV01', 48000, 160, 2,5000000, 0, 0,'2023-11-11'),
-       ('PL02', 'NV02', 57000, 180, 0,6000000, 0, 0,'2023-11-11'),
-       ('PL03', 'NV03', 53000, 176, 3,5500000, 0, 0,'2023-11-11'),
-	   ('PL04', 'NV04', 48000, 160, 2,5000000, 0, 0,'2023-12-11'),
-       ('PL05', 'NV05', 57000, 180, 0,6000000, 0, 0,'2023-12-11'),
-       ('PL06', 'NV06', 53000, 176, 3,5500000, 0, 0,'2023-10-11'),
-	   ('PL07', 'NV07', 48000, 160, 2,5000000, 0, 0,'2023-11-11'),
-       ('PL08', 'NV08', 57000, 180, 0,6000000, 0, 0,'2023-12-11'),
-       ('PL09', 'NV09', 53000, 176, 3,5500000, 0, 0,'2023-10-11'),
-	   ('PL10', 'NV010', 48000, 160, 2,5000000, 0, 0,'2023-10-11'),
-       ('PL11', 'NV011', 57000, 180, 0,6000000, 0, 0,'2023-11-11'),
-       ('PL12', 'NV012', 53000, 176, 3,5500000, 0, 0,'2023-08-11'),
-	   ('PL13', 'NV013', 48000, 160, 2,5000000, 0, 0,'2023-08-11'),
-       ('PL14', 'NV014', 57000, 180, 0,6000000, 0, 0,'2023-08-11'),
-       ('PL15', 'NV015', 53000, 176, 3,5500000, 0, 0,'2023-08-11');
+INSERT INTO PhieuLuong (MaPhieu, MaNhanVien, LuongHienTai, SoGioLam, SoGioTangCa, PhuCap, TroCap, TongLuong,ThangLuong,TrangThai)
+VALUES ('PL01', 'NV01', 48000, 160, 2,5000000, 0, 0,'2023-11-11','Yes'),
+       ('PL02', 'NV02', 57000, 180, 0,6000000, 0, 0,'2023-11-11','Yes'),
+       ('PL03', 'NV03', 53000, 176, 3,5500000, 0, 0,'2023-11-11','Yes'),
+	   ('PL04', 'NV04', 48000, 160, 2,5000000, 0, 0,'2023-12-11','Yes'),
+       ('PL05', 'NV05', 57000, 180, 0,6000000, 0, 0,'2023-12-11','Yes'),
+       ('PL06', 'NV06', 53000, 176, 3,5500000, 0, 0,'2023-10-11','Yes'),
+	   ('PL07', 'NV07', 48000, 160, 2,5000000, 0, 0,'2023-11-11','No'),
+       ('PL08', 'NV08', 57000, 180, 0,6000000, 0, 0,'2023-12-11','No'),
+       ('PL09', 'NV09', 53000, 176, 3,5500000, 0, 0,'2023-10-11','No'),
+	   ('PL10', 'NV010', 48000, 160, 2,5000000, 0, 0,'2023-10-11','No'),
+       ('PL11', 'NV011', 57000, 180, 0,6000000, 0, 0,'2023-11-11','No'),
+       ('PL12', 'NV012', 53000, 176, 3,5500000, 0, 0,'2023-08-11','No'),
+	   ('PL13', 'NV013', 48000, 160, 2,5000000, 0, 0,'2023-08-11','No'),
+       ('PL14', 'NV014', 57000, 180, 0,6000000, 0, 0,'2023-08-11','No'),
+       ('PL15', 'NV015', 53000, 176, 3,5500000, 0, 0,'2023-08-11','No');
 
 
 INSERT INTO Kho (MaChiNhanh, MaHangHoa, SoLuong)
@@ -339,6 +341,9 @@ values
 -- cập nhật lương cho Phiếu lương
 update PhieuLuong 
 set TongLuong = LuongHienTai * (SoGioLam + SoGioTangCa) + PhuCap + TroCap;
+
+update PhieuBanHang 
+set TongTien = SoLuong *
 
 select*from TaiKhoan
 

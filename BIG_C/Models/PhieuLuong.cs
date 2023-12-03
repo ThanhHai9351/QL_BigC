@@ -24,6 +24,8 @@ namespace BIG_C.Models
 
         public int TongLuong { get; set; }
 
+        public string TrangThai { get; set; }
+
         public DateTime ThangLuong { get; set; }
     }
 }

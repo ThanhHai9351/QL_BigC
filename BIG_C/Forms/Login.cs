@@ -16,5 +16,31 @@ namespace BIG_C.Forms
         {
             InitializeComponent();
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            if(cboIsAdmin.Checked)
+            {
+                if(txtUser.Text.TrimEnd()=="admin"&&txtPass.Text.TrimEnd()=="123")
+                {
+                    FormAdmin frm = new FormAdmin();
+                    frm.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Sai Tài Khoản Hoặc Mật Khẩu");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Sai Tài Khoản Hoặc Mật Khẩu!");
+            }    
+        }
     }
 }

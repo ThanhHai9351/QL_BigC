@@ -180,7 +180,7 @@ namespace BIG_C.Forms
             }
             else
             {
-                MessageBox.Show("Sửa thất bại!");
+                MessageBox.Show("Thêm thất bại!");
             }
         }
 
