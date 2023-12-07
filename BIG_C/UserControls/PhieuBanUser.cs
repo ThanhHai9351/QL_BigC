@@ -31,6 +31,7 @@ namespace BIG_C.UserControls
 
         private void PhieuBanUser_Load(object sender, EventArgs e)
         {
+            lbName.Text = db.GetNameNhanVien(manv.TrimEnd());
             List<PhieuBanHang> phieuBanHangs = db.GetPhieuBanHangs().Where(row => row.MaNhanVien.TrimEnd() == manv.TrimEnd()).ToList();
             List<HangHoa> hangHoas = db.GetHangHoas();
             cboHangHoa.Items.Clear();
