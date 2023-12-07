@@ -43,6 +43,17 @@ namespace BIG_C.Models
             return accounts;
         }
 
+        public bool checkIsvalidAccount(string name,string pass)
+        {
+            List<Account> accounts = GetAccounts();
+            foreach(var item in accounts)
+            {
+                if (item.MaNhanVien.TrimEnd() == name.TrimEnd() && item.Pass.TrimEnd() == pass.TrimEnd())
+                    return true;
+            }
+            return false;
+        }
+
         public List<ChiNhanh> GetChiNhanhs()
         {
             if (connection == null)

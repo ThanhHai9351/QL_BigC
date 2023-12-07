@@ -58,6 +58,12 @@
     <Compile Include="Forms\FormAdmin.Designer.cs">
       <DependentUpon>FormAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormUser.Designer.cs">
+      <DependentUpon>FormUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,11 +109,35 @@
     <Compile Include="UserControls\Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\HomePageNhanVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\HomePageNhanVien.Designer.cs">
+      <DependentUpon>HomePageNhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\LichLams.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\LichLams.Designer.cs">
       <DependentUpon>LichLams.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\LichLamUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\LichLamUser.Designer.cs">
+      <DependentUpon>LichLamUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\LuongUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\LuongUser.Designer.cs">
+      <DependentUpon>LuongUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PhieuBanUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\PhieuBanUser.Designer.cs">
+      <DependentUpon>PhieuBanUser.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\QuanLy.cs">
       <SubType>UserControl</SubType>
@@ -129,6 +159,9 @@
     </Compile>
     <EmbeddedResource Include="Forms\FormAdmin.resx">
       <DependentUpon>FormAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormUser.resx">
+      <DependentUpon>FormUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -155,8 +188,20 @@
     <EmbeddedResource Include="UserControls\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\HomePageNhanVien.resx">
+      <DependentUpon>HomePageNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\LichLams.resx">
       <DependentUpon>LichLams.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\LichLamUser.resx">
+      <DependentUpon>LichLamUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\LuongUser.resx">
+      <DependentUpon>LuongUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\PhieuBanUser.resx">
+      <DependentUpon>PhieuBanUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\QuanLy.resx">
       <DependentUpon>QuanLy.cs</DependentUpon>

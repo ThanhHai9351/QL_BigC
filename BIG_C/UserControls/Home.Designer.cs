@@ -31,48 +31,48 @@ namespace BIG_C.UserControls
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.lbGiaTien = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.panelBottom = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel3 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lbSoTonKho = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lbLuong = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.lb = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.lbTienMua = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lbSoTonKho = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.lbTienBan = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.lbSoSPBan = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.lb = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.lbLuong = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.label9 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panelBottom.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.panel3.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // imageList1
@@ -96,16 +96,6 @@ namespace BIG_C.UserControls
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(934, 77);
             this.panel1.TabIndex = 2;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(186, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(82, 61);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -169,10 +159,34 @@ namespace BIG_C.UserControls
             this.panelBottom.Controls.Add(this.chart1);
             this.panelBottom.Controls.Add(this.panel3);
             this.panelBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelBottom.Location = new System.Drawing.Point(0, 68);
+            this.panelBottom.Location = new System.Drawing.Point(0, 71);
             this.panelBottom.Name = "panelBottom";
-            this.panelBottom.Size = new System.Drawing.Size(934, 513);
+            this.panelBottom.Size = new System.Drawing.Size(934, 510);
             this.panelBottom.TabIndex = 1;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.RosyBrown;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.ForestGreen;
+            this.label9.Location = new System.Drawing.Point(38, 365);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(165, 39);
+            this.label9.TabIndex = 3;
+            this.label9.Text = "Thống Kê";
+            // 
+            // chart1
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(268, 281);
+            this.chart1.Name = "chart1";
+            this.chart1.Size = new System.Drawing.Size(614, 220);
+            this.chart1.TabIndex = 2;
+            this.chart1.Text = "chart1";
             // 
             // panel3
             // 
@@ -193,16 +207,6 @@ namespace BIG_C.UserControls
             this.flowLayoutPanel1.Size = new System.Drawing.Size(389, 243);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.BurlyWood;
-            this.panel4.Controls.Add(this.groupBox1);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(379, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(401, 243);
-            this.panel4.TabIndex = 0;
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.lbLuong);
@@ -219,25 +223,55 @@ namespace BIG_C.UserControls
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             // 
-            // label5
+            // lbLuong
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(15, 38);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(231, 20);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Số lượng sản phẩm trong kho:";
+            this.lbLuong.AutoSize = true;
+            this.lbLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLuong.Location = new System.Drawing.Point(184, 181);
+            this.lbLuong.Name = "lbLuong";
+            this.lbLuong.Size = new System.Drawing.Size(33, 20);
+            this.lbLuong.TabIndex = 7;
+            this.lbLuong.Text = "5%";
             // 
-            // lbSoTonKho
+            // label11
             // 
-            this.lbSoTonKho.AutoSize = true;
-            this.lbSoTonKho.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSoTonKho.Location = new System.Drawing.Point(286, 38);
-            this.lbSoTonKho.Name = "lbSoTonKho";
-            this.lbSoTonKho.Size = new System.Drawing.Size(53, 20);
-            this.lbSoTonKho.TabIndex = 1;
-            this.lbSoTonKho.Text = "label6";
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(15, 181);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(142, 20);
+            this.label11.TabIndex = 6;
+            this.label11.Text = "Lương Nhân Viên:";
+            // 
+            // lb
+            // 
+            this.lb.AutoSize = true;
+            this.lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb.Location = new System.Drawing.Point(184, 141);
+            this.lb.Name = "lb";
+            this.lb.Size = new System.Drawing.Size(33, 20);
+            this.lb.TabIndex = 5;
+            this.lb.Text = "5%";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(15, 141);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(46, 20);
+            this.label13.TabIndex = 4;
+            this.label13.Text = "VAT:";
+            // 
+            // lbTienMua
+            // 
+            this.lbTienMua.AutoSize = true;
+            this.lbTienMua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTienMua.Location = new System.Drawing.Point(184, 89);
+            this.lbTienMua.Name = "lbTienMua";
+            this.lbTienMua.Size = new System.Drawing.Size(53, 20);
+            this.lbTienMua.TabIndex = 3;
+            this.lbTienMua.Text = "label6";
             // 
             // label4
             // 
@@ -249,15 +283,35 @@ namespace BIG_C.UserControls
             this.label4.TabIndex = 2;
             this.label4.Text = "Số Tiền Mua Hàng:";
             // 
-            // lbTienMua
+            // lbSoTonKho
             // 
-            this.lbTienMua.AutoSize = true;
-            this.lbTienMua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTienMua.Location = new System.Drawing.Point(184, 89);
-            this.lbTienMua.Name = "lbTienMua";
-            this.lbTienMua.Size = new System.Drawing.Size(53, 20);
-            this.lbTienMua.TabIndex = 3;
-            this.lbTienMua.Text = "label6";
+            this.lbSoTonKho.AutoSize = true;
+            this.lbSoTonKho.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSoTonKho.Location = new System.Drawing.Point(286, 38);
+            this.lbSoTonKho.Name = "lbSoTonKho";
+            this.lbSoTonKho.Size = new System.Drawing.Size(53, 20);
+            this.lbSoTonKho.TabIndex = 1;
+            this.lbSoTonKho.Text = "label6";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(15, 38);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(231, 20);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Số lượng sản phẩm trong kho:";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.BurlyWood;
+            this.panel4.Controls.Add(this.groupBox1);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel4.Location = new System.Drawing.Point(379, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(401, 243);
+            this.panel4.TabIndex = 0;
             // 
             // groupBox1
             // 
@@ -272,6 +326,26 @@ namespace BIG_C.UserControls
             this.groupBox1.Size = new System.Drawing.Size(361, 221);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(184, 141);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(42, 20);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "10%";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(15, 141);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(95, 20);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "Lợi Nhuận: ";
             // 
             // lbTienBan
             // 
@@ -313,89 +387,15 @@ namespace BIG_C.UserControls
             this.label10.TabIndex = 0;
             this.label10.Text = "Số lượng sản phẩm đã bán:";
             // 
-            // lb
+            // pictureBox1
             // 
-            this.lb.AutoSize = true;
-            this.lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb.Location = new System.Drawing.Point(184, 141);
-            this.lb.Name = "lb";
-            this.lb.Size = new System.Drawing.Size(33, 20);
-            this.lb.TabIndex = 5;
-            this.lb.Text = "5%";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(15, 141);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(46, 20);
-            this.label13.TabIndex = 4;
-            this.label13.Text = "VAT:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(184, 141);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(42, 20);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "10%";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(15, 141);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(95, 20);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "Lợi Nhuận: ";
-            // 
-            // lbLuong
-            // 
-            this.lbLuong.AutoSize = true;
-            this.lbLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbLuong.Location = new System.Drawing.Point(184, 181);
-            this.lbLuong.Name = "lbLuong";
-            this.lbLuong.Size = new System.Drawing.Size(33, 20);
-            this.lbLuong.TabIndex = 7;
-            this.lbLuong.Text = "5%";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(15, 181);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(142, 20);
-            this.label11.TabIndex = 6;
-            this.label11.Text = "Lương Nhân Viên:";
-            // 
-            // chart1
-            // 
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
-            this.chart1.Location = new System.Drawing.Point(268, 281);
-            this.chart1.Name = "chart1";
-            this.chart1.Size = new System.Drawing.Size(614, 220);
-            this.chart1.TabIndex = 2;
-            this.chart1.Text = "chart1";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.RosyBrown;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label9.Location = new System.Drawing.Point(38, 365);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(165, 39);
-            this.label9.TabIndex = 3;
-            this.label9.Text = "Thống Kê";
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(186, 10);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(82, 61);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // Home
             // 
@@ -408,19 +408,19 @@ namespace BIG_C.UserControls
             this.Load += new System.EventHandler(this.Home_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panelBottom.ResumeLayout(false);
             this.panelBottom.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.panel4.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

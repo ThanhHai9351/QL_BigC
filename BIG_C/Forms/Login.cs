@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BIG_C.Models;
 
 namespace BIG_C.Forms
 {
@@ -24,9 +25,26 @@ namespace BIG_C.Forms
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if(cboIsAdmin.Checked)
+            if(txtUser.Text == ""||txtPass.Text=="")
             {
-                if(txtUser.Text.TrimEnd()=="admin"&&txtPass.Text.TrimEnd()=="123")
+                MessageBox.Show("Bạn chưa nhập đủ các trường!");
+            }
+            else if(cboIsNhanVien.Checked)
+            {
+                CompanyDB db = new CompanyDB();
+                if(db.checkIsvalidAccount(txtUser.Text.TrimEnd(),txtPass.Text.TrimEnd()))
+                {
+                    FormUser frm = new FormUser(txtUser.Text.TrimEnd());
+                    frm.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Tài khoản hoặc mật khẩu không hợp lệ!");
+                }
+            }else if(!cboIsNhanVien.Checked)
+            {
+                if(txtUser.Text.TrimEnd()=="admin"&&txtPass.Text.TrimEnd()=="admin123")
                 {
                     FormAdmin frm = new FormAdmin();
                     frm.Show();
@@ -34,13 +52,20 @@ namespace BIG_C.Forms
                 }
                 else
                 {
-                    MessageBox.Show("Sai Tài Khoản Hoặc Mật Khẩu");
+                    MessageBox.Show("Tài khoản hoặc mật khẩu không hợp lệ!");
                 }
             }
-            else
-            {
-                MessageBox.Show("Sai Tài Khoản Hoặc Mật Khẩu!");
-            }    
+        }
+       
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboIsAdmin_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

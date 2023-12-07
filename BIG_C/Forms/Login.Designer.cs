@@ -44,7 +44,7 @@ namespace BIG_C.Forms
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.cboIsAdmin = new System.Windows.Forms.CheckBox();
+            this.cboIsNhanVien = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -108,6 +108,7 @@ namespace BIG_C.Forms
             this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPass.Location = new System.Drawing.Point(524, 200);
             this.txtPass.Name = "txtPass";
+            this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(293, 30);
             this.txtPass.TabIndex = 13;
             // 
@@ -183,22 +184,23 @@ namespace BIG_C.Forms
             this.label4.TabIndex = 9;
             this.label4.Text = "Phần mền tính lương Big C";
             // 
-            // cboIsAdmin
+            // cboIsNhanVien
             // 
-            this.cboIsAdmin.AutoSize = true;
-            this.cboIsAdmin.Location = new System.Drawing.Point(758, 125);
-            this.cboIsAdmin.Name = "cboIsAdmin";
-            this.cboIsAdmin.Size = new System.Drawing.Size(89, 21);
-            this.cboIsAdmin.TabIndex = 17;
-            this.cboIsAdmin.Text = "Là Admin";
-            this.cboIsAdmin.UseVisualStyleBackColor = true;
+            this.cboIsNhanVien.AutoSize = true;
+            this.cboIsNhanVien.Location = new System.Drawing.Point(758, 125);
+            this.cboIsNhanVien.Name = "cboIsNhanVien";
+            this.cboIsNhanVien.Size = new System.Drawing.Size(116, 21);
+            this.cboIsNhanVien.TabIndex = 17;
+            this.cboIsNhanVien.Text = "Là Nhân Viên";
+            this.cboIsNhanVien.UseVisualStyleBackColor = true;
+            this.cboIsNhanVien.CheckedChanged += new System.EventHandler(this.cboIsAdmin_CheckedChanged);
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(891, 386);
-            this.Controls.Add(this.cboIsAdmin);
+            this.Controls.Add(this.cboIsNhanVien);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnLogin);
@@ -209,6 +211,7 @@ namespace BIG_C.Forms
             this.Controls.Add(this.panel1);
             this.Name = "Login";
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -233,6 +236,6 @@ namespace BIG_C.Forms
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.CheckBox cboIsAdmin;
+        private System.Windows.Forms.CheckBox cboIsNhanVien;
     }
 }

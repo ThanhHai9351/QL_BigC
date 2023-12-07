@@ -1,7 +1,7 @@
 ﻿
 namespace BIG_C.Forms
 {
-    partial class FormAdmin
+    partial class FormUser
     {
         /// <summary>
         /// Required designer variable.
@@ -30,15 +30,13 @@ namespace BIG_C.Forms
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAdmin));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUser));
             this.panel1 = new System.Windows.Forms.Panel();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelContainer = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
-            this.btnQuanLy = new System.Windows.Forms.Button();
             this.btnLichSuBan = new System.Windows.Forms.Button();
-            this.btnKho = new System.Windows.Forms.Button();
             this.btnLichLam = new System.Windows.Forms.Button();
             this.btnTinhLuong = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
@@ -51,9 +49,7 @@ namespace BIG_C.Forms
             // panel1
             // 
             this.panel1.Controls.Add(this.btnExit);
-            this.panel1.Controls.Add(this.btnQuanLy);
             this.panel1.Controls.Add(this.btnLichSuBan);
-            this.panel1.Controls.Add(this.btnKho);
             this.panel1.Controls.Add(this.btnLichLam);
             this.panel1.Controls.Add(this.btnTinhLuong);
             this.panel1.Controls.Add(this.btnHome);
@@ -62,7 +58,7 @@ namespace BIG_C.Forms
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(207, 658);
-            this.panel1.TabIndex = 0;
+            this.panel1.TabIndex = 2;
             // 
             // imageList1
             // 
@@ -88,10 +84,10 @@ namespace BIG_C.Forms
             // panelContainer
             // 
             this.panelContainer.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelContainer.Location = new System.Drawing.Point(206, 0);
+            this.panelContainer.Location = new System.Drawing.Point(213, 0);
             this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(935, 658);
-            this.panelContainer.TabIndex = 1;
+            this.panelContainer.Size = new System.Drawing.Size(928, 658);
+            this.panelContainer.TabIndex = 3;
             // 
             // btnExit
             // 
@@ -113,26 +109,6 @@ namespace BIG_C.Forms
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // btnQuanLy
-            // 
-            this.btnQuanLy.BackColor = System.Drawing.Color.Red;
-            this.btnQuanLy.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnQuanLy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQuanLy.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuanLy.ForeColor = System.Drawing.Color.Transparent;
-            this.btnQuanLy.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnQuanLy.ImageKey = "management.png";
-            this.btnQuanLy.ImageList = this.imageList1;
-            this.btnQuanLy.Location = new System.Drawing.Point(0, 475);
-            this.btnQuanLy.Name = "btnQuanLy";
-            this.btnQuanLy.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.btnQuanLy.Size = new System.Drawing.Size(207, 75);
-            this.btnQuanLy.TabIndex = 6;
-            this.btnQuanLy.Text = "Quản Lý";
-            this.btnQuanLy.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQuanLy.UseVisualStyleBackColor = false;
-            this.btnQuanLy.Click += new System.EventHandler(this.btnQuanLy_Click);
-            // 
             // btnLichSuBan
             // 
             this.btnLichSuBan.BackColor = System.Drawing.Color.Red;
@@ -143,35 +119,15 @@ namespace BIG_C.Forms
             this.btnLichSuBan.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLichSuBan.ImageKey = "history.png";
             this.btnLichSuBan.ImageList = this.imageList1;
-            this.btnLichSuBan.Location = new System.Drawing.Point(0, 400);
+            this.btnLichSuBan.Location = new System.Drawing.Point(0, 325);
             this.btnLichSuBan.Name = "btnLichSuBan";
-            this.btnLichSuBan.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.btnLichSuBan.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnLichSuBan.Size = new System.Drawing.Size(207, 75);
             this.btnLichSuBan.TabIndex = 5;
-            this.btnLichSuBan.Text = "Lịch Sử Bán";
+            this.btnLichSuBan.Text = "Phiếu Bán Hàng";
             this.btnLichSuBan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLichSuBan.UseVisualStyleBackColor = false;
             this.btnLichSuBan.Click += new System.EventHandler(this.btnLichSuBan_Click);
-            // 
-            // btnKho
-            // 
-            this.btnKho.BackColor = System.Drawing.Color.Red;
-            this.btnKho.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnKho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKho.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKho.ForeColor = System.Drawing.Color.Transparent;
-            this.btnKho.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnKho.ImageKey = "shop.png";
-            this.btnKho.ImageList = this.imageList1;
-            this.btnKho.Location = new System.Drawing.Point(0, 325);
-            this.btnKho.Name = "btnKho";
-            this.btnKho.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.btnKho.Size = new System.Drawing.Size(207, 75);
-            this.btnKho.TabIndex = 4;
-            this.btnKho.Text = "Kho";
-            this.btnKho.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKho.UseVisualStyleBackColor = false;
-            this.btnKho.Click += new System.EventHandler(this.btnKho_Click);
             // 
             // btnLichLam
             // 
@@ -185,7 +141,7 @@ namespace BIG_C.Forms
             this.btnLichLam.ImageList = this.imageList1;
             this.btnLichLam.Location = new System.Drawing.Point(0, 250);
             this.btnLichLam.Name = "btnLichLam";
-            this.btnLichLam.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.btnLichLam.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnLichLam.Size = new System.Drawing.Size(207, 75);
             this.btnLichLam.TabIndex = 3;
             this.btnLichLam.Text = "Lịch Làm";
@@ -205,10 +161,10 @@ namespace BIG_C.Forms
             this.btnTinhLuong.ImageList = this.imageList1;
             this.btnTinhLuong.Location = new System.Drawing.Point(0, 175);
             this.btnTinhLuong.Name = "btnTinhLuong";
-            this.btnTinhLuong.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.btnTinhLuong.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnTinhLuong.Size = new System.Drawing.Size(207, 75);
             this.btnTinhLuong.TabIndex = 2;
-            this.btnTinhLuong.Text = "Tính Lương";
+            this.btnTinhLuong.Text = "Lương";
             this.btnTinhLuong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTinhLuong.UseVisualStyleBackColor = false;
             this.btnTinhLuong.Click += new System.EventHandler(this.btnTinhLuong_Click);
@@ -225,7 +181,7 @@ namespace BIG_C.Forms
             this.btnHome.ImageList = this.imageList1;
             this.btnHome.Location = new System.Drawing.Point(0, 100);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.btnHome.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnHome.Size = new System.Drawing.Size(207, 75);
             this.btnHome.TabIndex = 1;
             this.btnHome.Text = "Trang Chủ";
@@ -244,17 +200,16 @@ namespace BIG_C.Forms
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // FormAdmin
+            // FormUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1141, 658);
-            this.Controls.Add(this.panelContainer);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "FormAdmin";
-            this.Text = "FormAdmin";
-            this.Load += new System.EventHandler(this.FormAdmin_Load);
+            this.Controls.Add(this.panelContainer);
+            this.Name = "FormUser";
+            this.Text = "FormUser1";
+            this.Load += new System.EventHandler(this.FormUser1_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -266,15 +221,13 @@ namespace BIG_C.Forms
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Button btnQuanLy;
+        private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Button btnLichSuBan;
-        private System.Windows.Forms.Button btnKho;
         private System.Windows.Forms.Button btnLichLam;
         private System.Windows.Forms.Button btnTinhLuong;
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Panel panelContainer;
     }
 }
