@@ -15,6 +15,7 @@ namespace BIG_C.UserControls
 {
     public partial class Home : UserControl
     {
+        CompanyDB db = new CompanyDB();
         public Home()
         {
             InitializeComponent();
@@ -22,31 +23,40 @@ namespace BIG_C.UserControls
 
         private void Home_Load(object sender, EventArgs e)
         {
-            CompanyDB db = new CompanyDB();
-            TaiKhoan tk = db.GetTaiKhoan();
-            lbGiaTien.Text = tk.SoDu + "";
-            Chart chart = new Chart();
-            chart.Size = new System.Drawing.Size(400, 300);
-
-            // Thêm biểu đồ vào Form
-            this.Controls.Add(chart);
-
-            // Tạo một chuỗi giá trị
-            string[] categories = new string[] { "Tuổi 18", "Tuổi 20", "Tuổi 25", "Tuổi 26", "Tuổi 30" };
-            int[] values = new int[] { 35, 20, 30, 25, 40 };
-
-            // Tạo loại biểu đồ cột
-            Series series = new Series("Số Nhân Viên");
-            series.ChartType = SeriesChartType.Column;
-
-            // Thêm các giá trị vào chuỗi biểu đồ
-            for (int i = 0; i < categories.Length; i++)
+            lvLuong.Items.Clear();
+            lvHangHoa.Items.Clear();
+            lvDanhThu.Items.Clear();
+            List<CanDoi> candoiHangHoa = db.GetCanDoiHangHoa();
+            List<CanDoi> candoiDanhThu = db.GetCanDoiDanhThu();
+            List<CanDoi> candoiLuong = db.GetCanDoiLuong();
+            List<TaiKhoan> tks = db.GetTaiKhoan();
+            TaiKhoan taiKhoanHH = db.GetTaiKhoan().Where(row => row.MaTaiKhoan.TrimEnd() == "156").FirstOrDefault();
+            TaiKhoan taiKhoanDT = db.GetTaiKhoan().Where(row => row.MaTaiKhoan.TrimEnd() == "511").FirstOrDefault();
+            TaiKhoan taiKhoanLuong = db.GetTaiKhoan().Where(row => row.MaTaiKhoan.TrimEnd() == "334").FirstOrDefault();
+            lbCanDoiHH.Text = taiKhoanHH.SoDu.ToString();
+            lbCanDoiDT.Text = taiKhoanDT.SoDu.ToString();
+            lbCanDoiLuong.Text = taiKhoanLuong.SoDu.ToString();
+            foreach (var item in candoiHangHoa)
             {
-                series.Points.AddXY(categories[i], values[i]);
+                ListViewItem item1 = new ListViewItem(db.GetNameHangHoa(item.ID.TrimEnd()));
+                item1.SubItems.Add(item.Money.ToString());
+                item1.SubItems.Add(item.Money.ToString());
+                lvHangHoa.Items.Add(item1);
             }
-
-            // Thêm chuỗi biểu đồ vào biểu đồ
-            chart1.Series.Add(series);
+            foreach (var item in candoiDanhThu)
+            {
+                ListViewItem item1 = new ListViewItem(db.GetNameHangHoa(item.ID.TrimEnd()));
+                item1.SubItems.Add(item.Money.ToString());
+                item1.SubItems.Add(item.Money.ToString());
+                lvDanhThu.Items.Add(item1);
+            }
+            foreach (var item in candoiLuong)
+            {
+                ListViewItem item1 = new ListViewItem(db.GetNameNhanVien(item.ID.TrimEnd()));
+                item1.SubItems.Add(item.Money.ToString());
+                item1.SubItems.Add(item.Money.ToString());
+                lvLuong.Items.Add(item1);
+            }
             lbSoTonKho.Text = db.GetSoSPTrongKho().ToString();
             lbTienMua.Text = db.GetSoTienDaDat().ToString();
             lbSoSPBan.Text = db.GetSoSPDaBan().ToString();
@@ -60,6 +70,16 @@ namespace BIG_C.UserControls
         }
 
         private void lbGiaTien_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelBottom_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
+
+        private void label16_Click(object sender, EventArgs e)
         {
 
         }

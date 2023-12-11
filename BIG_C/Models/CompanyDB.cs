@@ -373,7 +373,7 @@ namespace BIG_C.Models
             return nhanViens;
         }
 
-        public TaiKhoan GetTaiKhoan()
+        public List<TaiKhoan> GetTaiKhoan()
         {
             if (connection == null)
             {
@@ -383,22 +383,25 @@ namespace BIG_C.Models
             {
                 connection.Open();
             }
-            TaiKhoan tk = new TaiKhoan();
+           
             SqlCommand command = new SqlCommand();
             command.CommandType = CommandType.Text;
             command.CommandText = "Select * from TaiKhoan";
             command.Connection = connection;
 
+            List<TaiKhoan> ltk = new List<TaiKhoan>();
             SqlDataReader reader = command.ExecuteReader();
-            if (reader.Read())
+            while (reader.Read())
             {
-                tk.MaTaiKhoan = reader.GetString(0);
+                TaiKhoan tk = new TaiKhoan();
+                tk.MaTaiKhoan = reader.GetString(0).TrimEnd();
                 tk.TenTaiKhoan = reader.GetString(1);
                 tk.LoaiTaiKhoan = reader.GetString(2);
-                tk.SoDu = reader.GetInt64(3);
+                tk.SoDu = reader.GetInt32(3);
+                ltk.Add(tk);
             }
             reader.Close();
-            return tk;
+            return ltk;
         }
 
         public string GetNameChiNhanh(string id)
@@ -526,6 +529,52 @@ namespace BIG_C.Models
             phieuLuongs = phieuLuongs.Where(row => row.TrangThai.TrimEnd() == "Yes").ToList();
             int sum = phieuLuongs.Sum(row => row.TongLuong);
             return sum;
+        }
+
+        public List<CanDoi> GetCanDoiHangHoa()
+        {
+            List<CanDoi> cds = new List<CanDoi>();
+            List<HangHoa> hh = GetHangHoas();
+            foreach(var item in hh)
+            {
+                CanDoi cd = new CanDoi();
+                cd.ID = item.MaHangHoa;
+                List<PhieuMuaHang> temp = GetPhieuMuaHangs().Where(row => row.MaHangHoa.TrimEnd() == item.MaHangHoa.TrimEnd()).ToList();
+                cd.Money = temp.Sum(row => row.TongTien);
+                cds.Add(cd);
+            }
+            return cds;
+        }
+
+        public List<CanDoi> GetCanDoiDanhThu()
+        {
+            List<CanDoi> cds = new List<CanDoi>();
+            List<HangHoa> hh = GetHangHoas();
+            foreach (var item in hh)
+            {
+                CanDoi cd = new CanDoi();
+                cd.ID = item.MaHangHoa;
+                List<PhieuBanHang> temp = GetPhieuBanHangs().Where(row => row.MaHangHoa.TrimEnd() == item.MaHangHoa.TrimEnd()).ToList();
+                cd.Money = temp.Sum(row => row.TongTien);
+                cds.Add(cd);
+            }
+            return cds;
+        }
+
+        public List<CanDoi> GetCanDoiLuong()
+        {
+            List<CanDoi> cds = new List<CanDoi>();
+            List<NhanVien> hh = GetNhanViens();
+            foreach (var item in hh)
+            {
+                CanDoi cd = new CanDoi();
+                cd.ID = item.MaNhanVien;
+                List<PhieuLuong> temp = GetPhieuLuongs().Where(row => row.MaNhanVien.TrimEnd() == item.MaNhanVien.TrimEnd()).ToList();
+                temp = temp.Where(row => row.TrangThai.TrimEnd() == "Yes").ToList();
+                cd.Money = temp.Sum(row => row.TongLuong);
+                cds.Add(cd);
+            }
+            return cds;
         }
     }
 }

@@ -83,6 +83,7 @@
       <DependentUpon>TaoLich.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Account.cs" />
+    <Compile Include="Models\CanDoi.cs" />
     <Compile Include="Models\ChiNhanh.cs" />
     <Compile Include="Models\CompanyDB.cs" />
     <Compile Include="Models\HangHoa.cs" />

@@ -14,6 +14,7 @@ namespace BIG_C.UserControls
 {
     public partial class ChamCong : UserControl
     {
+        CompanyDB db = new CompanyDB();
         public SqlConnection connection = null;
         public ChamCong()
         {
@@ -265,6 +266,16 @@ namespace BIG_C.UserControls
             else
             {
                 MessageBox.Show("Xóa phiếu lương thất bại!");
+            }
+        }
+
+        private void cboChiNhanh_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            List<NhanVien> nv = db.GetNhanViens().Where(row => row.MaChiNhanh == db.GetIDChiNhanh(cboChiNhanh.Text.TrimEnd())).ToList();
+            cboNhanVien.Items.Clear();
+            foreach (var item in nv)
+            {
+                cboNhanVien.Items.Add(item.TenNhanVien);
             }
         }
     }

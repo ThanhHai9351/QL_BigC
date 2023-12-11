@@ -50,6 +50,13 @@ namespace BIG_C.UserControls
                 item1.SubItems.Add(item.TongTien.ToString());
                 lvPhieuBan.Items.Add(item1);
             }
+            NhanVien nv = db.GetNhanViens().Where(row => row.MaNhanVien.TrimEnd() == manv.TrimEnd()).FirstOrDefault();
+            List<Kho> kho = db.GetKhos().Where(row => row.MaChiNhanh.TrimEnd() == nv.MaChiNhanh.TrimEnd()).ToList();
+            cboHangHoa.Items.Clear();
+            foreach (var item in kho)
+            {
+                cboHangHoa.Items.Add(db.GetNameHangHoa(item.MaHangHoa));
+            }
         }
 
         private void btnSearch_Click(object sender, EventArgs e)

@@ -3,7 +3,6 @@
 USE BigC
 GO
 
-
 create table TaiKhoan
 (
     MaTaiKhoan char(10) primary key,
@@ -129,53 +128,14 @@ create table Account
 )
 
 
-create trigger ChangeSoDu on PhieuBanHang
-after insert
-as
-begin
-	declare @tien int = (select TongTien from inserted)
-	update TaiKhoan
-	set SoDu = SoDu + @tien
-end
 
-create trigger ChangeSoDu1 on PhieuBanHang
-after delete
-as
-begin
-	declare @tien int = (select TongTien from deleted)
-	update TaiKhoan
-	set SoDu = SoDu - @tien
-end
-
-create trigger ChangeSoDuTru on PhieuMuaHang
-after insert
-as
-begin
-	declare @tien int = (select TongTien from inserted)
-	update TaiKhoan
-	set SoDu = SoDu - @tien
-end
-
-create trigger ChangeSoDuTru1 on PhieuMuaHang
-after insert
-as
-begin
-	declare @tien int = (select TongTien from inserted)
-	update TaiKhoan
-	set SoDu = SoDu + @tien
-end
-
-create trigger addKho on PhieuMuaHang
-after insert
-as
-begin 
-	declare @macn char(10),@mahh char(10), @sl int;
-	select @macn = MaChiNhanh, @mahh = MaHangHoa,@sl = SoLuong from inserted;
-	insert into Kho values (@macn,@mahh,@sl);
-end
 
 INSERT INTO TaiKhoan (MaTaiKhoan, TenTaiKhoan, LoaiTaiKhoan, SoDu)
-VALUES ('TK001', 'Tong cuc Big C', 'Thanh toan', 100000000);
+VALUES ('156', 'Buy', 'Thanh toan', 100000000),
+('511', 'Sell', 'Thanh toan', 0),
+('334', 'Salary', 'Thanh toan', 100000000)
+
+select * from TaiKhoan
 
 INSERT INTO ChiNhanh (MaChiNhanh, TenChiNhanh, DiaChi)
 VALUES
@@ -234,10 +194,10 @@ INSERT INTO HangHoa (MaHangHoa, TenHangHoa, DonGia,MaNhaCungCap) VALUES
 ('HH002', N'Gạo tám thơm ST25 5kg', 120000,'NCC03'),
 ('HH003', N'Thịt heo tươi thăn mông', 120000,'NCC03'),
 ('HH004', N'Cá hồi fillet Nauy 300g', 250000,'NCC03'),
-('HH005', N'Xúc xích Đức 400g', 100000,'NCC03'),
-('HH006', N'Bánh mì tươi Pháp 500g', 30000,'NCC03'),
+('HH005', N'Xúc xích Đứcc 400g', 100000,'NCC03'),
+('HH006', N'Bánh mì ttươii Pháp 500g', 30000,'NCC03'),
 ('HH007', N'Trà xanh Oolong Đài Loan 200g', 300000,'NCC03'),
-('HH008', N'Nước giặt Tide 3.8kg', 150000,'NCC03'),
+('HH008', N'NNướcc giặt Tide 3.8kg', 150000,'NCC03'),
 ('HH009', N'Bột giặt Ariel 4kg', 150000,'NCC03'),
 ('HH010', N'Sữa chua Vinamilk hương dâu 100g', 15000,'NCC03'),
 ('HH011', N'Nước mắm Phú Quốc Knorr 500ml', 25000,'NCC03'),
@@ -271,9 +231,9 @@ VALUES
 
 
 INSERT INTO PhieuMuaHang (MaPhieu,MaChiNhanh, MaHangHoa, NgayDat, NgayGiao, SoLuong, TongTien, Mota)
-VALUES ('PMH01','CN001', 'HH001' ,'2023-03-01', '2023-03-15', 100, 10000, N'Mua hàng lần đầu')
+VALUES ('PMH01','CN001', 'HH001' ,'2023-03-01', '2023-03-15', 100, 10000, N'Mua hàng l?n ??u')
 INSERT INTO PhieuMuaHang (MaPhieu, MaChiNhanh,MaHangHoa, NgayDat, NgayGiao, SoLuong, TongTien, Mota)
-VALUES  ('PMH02','CN002', 'HH002', '2023-03-05', '2023-03-20', 50, 7500, N'Mua hàng lần đầu')
+VALUES  ('PMH02','CN002', 'HH002', '2023-03-05', '2023-03-20', 50, 7500, N'Mua hàng l?n ??u')
 
 
 INSERT INTO PhieuLuong (MaPhieu, MaNhanVien, LuongHienTai, SoGioLam, SoGioTangCa, PhuCap, TroCap, TongLuong,ThangLuong,TrangThai)
@@ -293,7 +253,7 @@ VALUES ('PL01', 'NV01', 48000, 160, 2,5000000, 0, 0,'2023-11-11','Yes'),
        ('PL14', 'NV014', 57000, 180, 0,6000000, 0, 0,'2023-08-11','No'),
        ('PL15', 'NV015', 53000, 176, 3,5500000, 0, 0,'2023-08-11','No');
 
-
+--Không cần
 INSERT INTO Kho (MaChiNhanh, MaHangHoa, SoLuong)
 VALUES ('CN001', 'HH001', 234),
        ('CN002', 'HH002', 145),
@@ -338,13 +298,102 @@ values
 ('NV014','123'),
 ('NV015','123')
 
--- cập nhật lương cho Phiếu lương
+-- c?p nh?t l??ng cho Phi?u l??ng
 update PhieuLuong 
 set TongLuong = LuongHienTai * (SoGioLam + SoGioTangCa) + PhuCap + TroCap;
 
-update PhieuBanHang 
-set TongTien = SoLuong *
 
-select*from TaiKhoan
+create trigger updateKhoAfterSell on PhieuBanHang 
+after insert
+as
+begin 
+	declare @macn char(10),@mahh char(10),@sl int
+	select @mahh = MaHangHoa,@macn = MaChiNhanh,@sl = SoLuong from inserted join NhanVien on NhanVien.MaNhanVien = inserted.MaNhanVien
+	update Kho
+	set SoLuong = SoLuong - @sl
+	where MaChiNhanh = @macn AND MaHangHoa = @mahh
+end
+go
 
-Select * from NhanVien where TenNhanVien LIKE N'%Hào%'
+
+create trigger changeMoneyafterSalary ON PhieuLuong
+after insert
+as
+begin
+	declare @salary int,@tt char(2)
+	select @salary = TongLuong , @tt = TrangThai from inserted
+	update TaiKhoan
+	set SoDu = SoDu - @salary
+	where MaTaiKhoan = '334'
+end
+go
+
+create trigger changeMoneyafterSalary1 ON PhieuLuong
+after delete
+as
+begin
+	declare @salary int,@tt char(2)
+	select @salary = TongLuong , @tt = TrangThai from deleted
+	update TaiKhoan
+	set SoDu = SoDu + @salary
+	where MaTaiKhoan = '334' 
+end
+go
+
+create trigger ChangeSoDu on PhieuBanHang
+after insert
+as
+begin
+	declare @tien int = (select TongTien from inserted)
+	update TaiKhoan
+	set SoDu = SoDu + @tien
+	where MaTaiKhoan = '511'
+end
+go
+
+create trigger ChangeSoDu1 on PhieuBanHang
+after delete
+as
+begin
+	declare @tien int = (select TongTien from deleted)
+	update TaiKhoan
+	set SoDu = SoDu - @tien
+	where MaTaiKhoan = '511'
+end
+go
+
+create trigger ChangeSoDuTru on PhieuMuaHang
+after insert
+as
+begin
+	declare @tien int = (select TongTien from inserted)
+	update TaiKhoan
+	set SoDu = SoDu - @tien
+	where MaTaiKhoan = '156'
+end
+go
+
+create trigger ChangeSoDuTru1 on PhieuMuaHang
+after delete
+as
+begin
+	declare @tien int = (select TongTien from deleted)
+	update TaiKhoan
+	set SoDu = SoDu + @tien
+	where MaTaiKhoan = '156'
+end
+go
+
+create trigger addKho on PhieuMuaHang
+after insert
+as
+begin 
+	declare @macn char(10),@mahh char(10), @sl int;
+	select @macn = MaChiNhanh, @mahh = MaHangHoa,@sl = SoLuong from inserted;
+	insert into Kho values (@macn,@mahh,@sl);
+end
+go
+
+select * from TaiKhoan where MaTaiKhoan = '156'
+INSERT INTO PhieuMuaHang (MaPhieu,MaChiNhanh, MaHangHoa, NgayDat, NgayGiao, SoLuong, TongTien, Mota)
+VALUES ('PMH04','CN001', 'HH001' ,'2023-03-01', '2023-03-15', 100, 10000, N'Mua hàng l?n ??u')

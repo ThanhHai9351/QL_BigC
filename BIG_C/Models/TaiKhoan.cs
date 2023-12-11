@@ -14,6 +14,6 @@ namespace BIG_C.Models
 
         public string LoaiTaiKhoan { get; set; }
 
-        public long SoDu { get; set; }
+        public int SoDu { get; set; }
     }
 }

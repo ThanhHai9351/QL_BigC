@@ -107,6 +107,7 @@ namespace BIG_C.UserControls
             this.cboChiNhanh.Name = "cboChiNhanh";
             this.cboChiNhanh.Size = new System.Drawing.Size(177, 28);
             this.cboChiNhanh.TabIndex = 1;
+            this.cboChiNhanh.SelectedIndexChanged += new System.EventHandler(this.cboChiNhanh_SelectedIndexChanged);
             // 
             // label7
             // 

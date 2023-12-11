@@ -14,6 +14,7 @@ namespace BIG_C.UserControls
 {
     public partial class UserBanHang : UserControl
     {
+        CompanyDB db = new CompanyDB();
         public SqlConnection connection = null;
         public UserBanHang()
         {
@@ -209,6 +210,27 @@ namespace BIG_C.UserControls
                 dtNgayBan.Value = DateTime.Parse(lvPhieuBan.SelectedItems[0].SubItems[3].Text.TrimEnd());
                 txtSoLuong.Text = lvPhieuBan.SelectedItems[0].SubItems[4].Text.TrimEnd();
                 txtTongTien.Text = lvPhieuBan.SelectedItems[0].SubItems[5].Text.TrimEnd();
+            }
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboHangHoa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboNhanVien_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            NhanVien nv = db.GetNhanViens().Where(row => row.MaNhanVien == db.GetIDNhanVien(cboNhanVien.Text.TrimEnd())).FirstOrDefault();
+            List<Kho> kho = db.GetKhos().Where(row => row.MaChiNhanh.TrimEnd() == nv.MaChiNhanh.TrimEnd()).ToList();
+            cboHangHoa.Items.Clear();
+            foreach(var item in kho)
+            {
+                cboHangHoa.Items.Add(db.GetNameHangHoa(item.MaHangHoa));
             }
         }
     }
