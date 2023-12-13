@@ -394,6 +394,26 @@ begin
 end
 go
 
+create trigger addNVtoAccount on NhanVien
+after insert
+as
+begin 
+	declare @ma char(10)
+	select @ma = MaNhanVien from inserted
+	insert into Account values (@ma,'123')
+end
+go
+
+create trigger addNVtoAccount1 on NhanVien
+after delete
+as
+begin 
+	declare @ma char(10)
+	select @ma = MaNhanVien from deleted
+	delete Account where MaNhanVien = @ma
+end
+go
+
 select * from TaiKhoan where MaTaiKhoan = '156'
 INSERT INTO PhieuMuaHang (MaPhieu,MaChiNhanh, MaHangHoa, NgayDat, NgayGiao, SoLuong, TongTien, Mota)
 VALUES ('PMH04','CN001', 'HH001' ,'2023-03-01', '2023-03-15', 100, 10000, N'Mua hàng l?n ??u')
